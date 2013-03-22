@@ -32,8 +32,13 @@ packages="$packages google-chrome-beta"
 
 # Zsh + oh-my-zsh.
 git clone git://github.com/robbyrussell/oh-my-zsh.git ~/.oh-my-zsh
-ln -s $pwd/zsh/zshrc ~/.zshrc
+ln -s $PWD/zsh/zshrc ~/.zshrc
 packages="$packages zsh"
+
+# Terminator
+mkdir ~/.config/terminator
+ln -s $PWD/terminator/config ~/.config/terminator/config
+packages="$packages terminator"
 
 # TODO: install virtualenv, virtualenvwrapper
 

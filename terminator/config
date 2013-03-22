@@ -1,0 +1,17 @@
+[global_config]
+  hide_tabbar = True
+[keybindings]
+[profiles]
+  [[default]]
+    scroll_on_keystroke = False
+    scrollbar_position = hidden
+    show_titlebar = False
+[layouts]
+  [[default]]
+    [[[child1]]]
+      type = Terminal
+      parent = window0
+    [[[window0]]]
+      type = Window
+      parent = ""
+[plugins]
