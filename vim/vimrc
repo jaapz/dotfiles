@@ -1,0 +1,33 @@
+colorscheme desert
+
+call pathogen#runtime_append_all_bundles()
+call pathogen#helptags()
+
+" Random basic settings
+let g:tagbar_usearrows = 1
+let mapleader = ","
+set mouse=a
+set tabstop=4
+set number
+set autoindent
+
+" TagBar
+noremap <leader>l :TagbarToggle<CR>
+noremap <leader>c :TagbarShowTag<CR>
+
+" NERDTree
+noremap <leader>z :NERDTreeToggle<CR>
+noremap <leader>a :NERDTreeFind<CR>
+
+" CommandT
+noremap <leader>t <Esc>:CommandT<CR>
+
+" Tabs
+noremap <leader>[ :tabn<CR>
+noremap <leader>] :tabp<CR>
+noremap <leader>p :tabnew<CR>
+noremap <leader>o :close<CR>
+
+" Undo/Redo
+noremap <leader>u :undo<CR>
+noremap <leader>r :redo<CR>
