@@ -1,0 +1,20 @@
+# Inspired by all options in:
+# http://flaveur.googlecode.com/svn/trunk/ports/gtk-doc/config.ncmpc
+
+auto-center = yes
+enable-mouse = yes
+
+# Colors
+enable-colors = yes
+color background = none
+color title = yellow
+color title-bold = brightyellow
+color line = white
+color line-flags = brightwhite
+color list = green
+color list-bold = brightgreen
+color progressbar = white
+color status-state = brightyellow
+color status-song = yellow
+color status-time = red
+color alert = brightred

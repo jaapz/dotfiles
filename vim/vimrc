@@ -10,6 +10,9 @@ set mouse=a
 set tabstop=4
 set number
 set autoindent
+set incsearch
+set hlsearch
+set noswapfile
 
 " TagBar
 noremap <leader>l :TagbarToggle<CR>
