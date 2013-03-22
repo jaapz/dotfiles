@@ -1,5 +1,3 @@
-colorscheme desert
-
 call pathogen#runtime_append_all_bundles()
 call pathogen#helptags()
 
@@ -13,6 +11,8 @@ set autoindent
 set incsearch
 set hlsearch
 set noswapfile
+colorscheme desert
+syntax on
 
 " TagBar
 noremap <leader>l :TagbarToggle<CR>
