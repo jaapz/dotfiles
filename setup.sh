@@ -5,7 +5,7 @@
 # to their appropriate places in the filesystem.
 
 # We seriously need these packages for some commands in this script.
-apt-get install git-core bzr mercurial;
+apt-get install -y  git-core bzr mercurial;
 
 # All packages that need to be installed at the end of
 # this script.
@@ -18,7 +18,7 @@ packages="$packages vim";
 # Music player deamon and mopidy.
 mkdir ~/.ncmpc;
 ln -s $PWD/ncmpc/config ~/.ncmpc/config;
-wget -q -O /etc/apt/sources.list.d/mopidy.list http://apt.mopidy.com/mopidy.list;
+wget -q -O /etc/apt/sources.list.d/mopidy.list http://apt.mopidy.com/mopidy.list;s
 packages="$packages mopidy ncmpc";
 
 # Conky.
@@ -45,11 +45,11 @@ packages="$packages terminator";
 # Other packages.
 packages="$packages aptitude";
 
-echo $packages;
+echo "Installing packages: $packages";
 
 # Install ALL the packages.
-# apt-get update;
-# apt-get install $packages;
+apt-get update;
+apt-get install -y $packages;
 
 # Quit with a nice message.
-echo "Everything is installed, make sure you set up the mopidy spotify settings correctly!\n";
+echo "Everything is installed, make sure you set up the mopidy spotify settings correctly!";
