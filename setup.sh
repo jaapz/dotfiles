@@ -12,16 +12,19 @@ apt-get install -y  git-core bzr mercurial;
 packages="";
 
 # Vim settings.
+mv ~/.vimrc ~/.vimrc-old
 ln -s $PWD/vim/vimrc ~/.vimrc;
 packages="$packages vim";
 
 # Music player deamon and mopidy.
+mv ~/.ncmpc ~/.ncmpc-old
 mkdir ~/.ncmpc;
 ln -s $PWD/ncmpc/config ~/.ncmpc/config;
 wget -q -O /etc/apt/sources.list.d/mopidy.list http://apt.mopidy.com/mopidy.list;s
 packages="$packages mopidy ncmpc";
 
 # Conky.
+mv ~/.conkyrc ~/.conkyrc-old
 ln -s $PWD/conky/conkyrc ~/.conkyrc;
 packages="$packages conky";
 
@@ -32,6 +35,7 @@ packages="$packages google-chrome-beta";
 
 # Zsh + oh-my-zsh.
 git clone git://github.com/robbyrussell/oh-my-zsh.git ~/.oh-my-zsh;
+mv ~/.zshrc ~/.zshrc-old;
 ln -s $PWD/zsh/zshrc ~/.zshrc;
 packages="$packages zsh";
 
