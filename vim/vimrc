@@ -12,7 +12,7 @@ set incsearch
 set hlsearch
 set noswapfile
 set nowritebackup 
-colorscheme desert
+colorscheme molokai
 syntax on
 
 " TagBar
