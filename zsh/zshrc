@@ -40,5 +40,8 @@ source $ZSH/oh-my-zsh.sh
 export PATH=/usr/lib/lightdm/lightdm:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/usr/games
 
 ### Added by the Heroku Toolbelt
-export PATH="/usr/local/heroku/bin:$PATH"
-source /usr/local/bin/virtualenvwrapper.sh
+#export PATH="/usr/local/heroku/bin:$PATH"
+#source /usr/local/bin/virtualenvwrapper.sh
+
+# Make sure the colors are used correctly in vim and the like.
+export TERM="term256-color"

@@ -39,6 +39,10 @@ mv ~/.zshrc ~/.zshrc-old;
 ln -s $PWD/zsh/zshrc ~/.zshrc;
 packages="$packages zsh";
 
+# Theme for zsh also needs hg-prompt.
+hg clone http://bitbucket.org/sjl/hg-prompt/ ~/.hg-prompt
+# TODO: add hgrc and add hg-promp as an extension.
+
 # Terminator
 mkdir ~/.config/terminator;
 ln -s $PWD/terminator/config ~/.config/terminator/config;

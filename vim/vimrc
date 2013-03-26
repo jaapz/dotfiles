@@ -11,6 +11,7 @@ set autoindent
 set incsearch
 set hlsearch
 set noswapfile
+set nowritebackup 
 colorscheme desert
 syntax on
 
