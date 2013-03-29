@@ -5,15 +5,22 @@ call pathogen#helptags()
 let g:tagbar_usearrows = 1
 let mapleader = ","
 set mouse=a
-set tabstop=4
+set shiftwidth=4
 set number
 set autoindent
+set smarttab
+set tabstop=4
+set expandtab
 set incsearch
 set hlsearch
 set noswapfile
 set nowritebackup 
 colorscheme molokai
 syntax on
+
+" Enable pyflakes
+filetype on
+filetype plugin on
 
 " TagBar
 noremap <leader>l :TagbarToggle<CR>

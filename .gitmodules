@@ -1,16 +1,12 @@
 [submodule "vim/pathogen"]
-        path = vim/pathogen
-        url = git://github.com/tpope/vim-pathogen.git
-
+    path = vim/pathogen
+    url = git://github.com/tpope/vim-pathogen.git
 [submodule "vim/bundle/tagbar"]
 	path = vim/bundle/tagbar
 	url = git://github.com/majutsushi/tagbar.git
 [submodule "vim/bundle/better-css-syntax"]
 	path = vim/bundle/better-css-syntax
 	url = git://github.com/vim-scripts/Better-CSS-Syntax-for-Vim.git
-[submodule "vim/bundle/command-t"]
-	path = vim/bundle/command-t
-	url = https://github.com/wincent/Command-T
 [submodule "vim/bundle/delimitmate"]
 	path = vim/bundle/delimitmate
 	url = git://github.com/Raimondi/delimitMate.git
@@ -20,3 +16,9 @@
 [submodule "vim/bundle/python-syntax"]
 	path = vim/bundle/python-syntax
 	url = git://github.com/vim-scripts/python.vim--Vasiliev.git
+[submodule "vim/bundle/commandt"]
+	path = vim/bundle/commandt
+	url = git://github.com/wincent/Command-T.git
+[submodule "vim/bundle/pyflakes"]
+	path = vim/bundle/pyflakes
+	url = git://github.com/vim-scripts/pyflakes.vim.git
