@@ -2,7 +2,6 @@
 # http://flaveur.googlecode.com/svn/trunk/ports/gtk-doc/config.ncmpc
 
 auto-center = yes
-enable-mouse = yes
 
 # Colors
 enable-colors = yes
