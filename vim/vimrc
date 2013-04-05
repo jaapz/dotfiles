@@ -1,5 +1,6 @@
 call pathogen#runtime_append_all_bundles()
 call pathogen#helptags()
+call pathogen#infect()
 
 " Random basic settings
 let g:tagbar_usearrows = 1
@@ -15,30 +16,35 @@ set incsearch
 set hlsearch
 set noswapfile
 set nowritebackup 
+set nocompatible
+
+" Enable colorscheme and 256 colors
 colorscheme molokai
 syntax on
+set term=xterm-256color
+set t_Co=256
 
 " Enable pyflakes
 filetype on
 filetype plugin on
 
 " TagBar
-noremap <leader>l :TagbarToggle<CR>
-noremap <leader>c :TagbarShowTag<CR>
+noremap <leader>l <Esc>:TagbarToggle<CR>
+noremap <leader>c <Esc>:TagbarShowTag<CR>
 
 " NERDTree
-noremap <leader>z :NERDTreeToggle<CR>
-noremap <leader>a :NERDTreeFind<CR>
+noremap <leader>z <Esc>:NERDTreeToggle<CR>
+noremap <leader>a <Esc>:NERDTreeFind<CR>
 
 " CommandT
 noremap <leader>t <Esc>:CommandT<CR>
 
 " Tabs
-noremap <leader>[ :tabn<CR>
-noremap <leader>] :tabp<CR>
-noremap <leader>p :tabnew<CR>
-noremap <leader>o :close<CR>
+noremap <leader>] <Esc>:tabn<CR>
+noremap <leader>[ <Esc>:tabp<CR>
+noremap <leader>p <Esc>:tabnew<CR>
+noremap <leader>o <Esc>:close<CR>
 
 " Undo/Redo
-noremap <leader>u :undo<CR>
-noremap <leader>r :redo<CR>
+noremap <leader>u <Esc>:undo<CR>
+noremap <leader>r <Esc>:redo<CR>
