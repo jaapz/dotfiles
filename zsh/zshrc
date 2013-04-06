@@ -44,4 +44,4 @@ export PATH=/usr/lib/lightdm/lightdm:/usr/local/sbin:/usr/local/bin:/usr/sbin:/u
 #source /usr/local/bin/virtualenvwrapper.sh
 
 # Make sure the colors are used correctly in vim and the like.
-export TERM="gnome-256color"
+export TERM="xterm-256color"

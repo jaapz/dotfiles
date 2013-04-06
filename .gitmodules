@@ -25,3 +25,6 @@
 [submodule "vim/bundle/vim-less"]
 	path = vim/bundle/vim-less
 	url = git://github.com/lunaru/vim-less.git
+[submodule "vim/bundle/twig"]
+	path = vim/bundle/twig
+	url = git://github.com/beyondwords/vim-twig.git
