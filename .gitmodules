@@ -34,3 +34,6 @@
 [submodule "vim/bundle/solarized-powerline"]
 	path = vim/bundle/solarized-powerline
 	url = git://github.com/stephenmckinney/vim-solarized-powerline.git
+[submodule "vim/bundle/twig"]
+	path = vim/bundle/twig
+	url = git://github.com/beyondwords/vim-twig.git
