@@ -23,6 +23,9 @@ set laststatus=2
 set cursorline
 set textwidth=120
 
+" Show git status in statusline
+set statusline+=%{fugitive#statusline()}
+
 " Enable colorscheme and 256 colors
 colorscheme molokai
 syntax on
@@ -49,8 +52,8 @@ noremap <leader>a <Esc>:NERDTreeFind<CR>
 noremap <leader>t <Esc>:CommandT<CR>
 
 " Tabs
-noremap <leader>] <Esc>:tabn<CR>
-noremap <leader>[ <Esc>:tabp<CR>
+noremap <leader>/ <Esc>:tabn<CR>
+noremap <leader>. <Esc>:tabp<CR>
 noremap <leader>p <Esc>:tabnew<CR>
 noremap <leader>o <Esc>:close<CR>
 

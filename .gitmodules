@@ -37,3 +37,6 @@
 [submodule "vim/bundle/twig"]
 	path = vim/bundle/twig
 	url = git://github.com/beyondwords/vim-twig.git
+[submodule "vim/bundle/fugitive"]
+	path = vim/bundle/fugitive
+	url = git://github.com/tpope/vim-fugitive.git
