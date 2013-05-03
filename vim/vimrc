@@ -28,7 +28,7 @@ set guioptions-=m " No menu bar
 set guioptions-=T " No toolbar
 set guioptions-=r " No right-hand side scrollbar
 set guioptions-=L " No left-hand side scrollbar
-set linespace=2 " Nicer lineheight
+set linespace=3 " Nicer lineheight
 
 " Make sure F11 also works in gVim
 map <silent> <F11>
