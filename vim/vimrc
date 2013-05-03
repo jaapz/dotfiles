@@ -71,3 +71,6 @@ noremap <leader>o <Esc>:tabclose<CR>
 " Undo/Redo
 noremap <leader>u <Esc>:undo<CR>
 noremap <leader>r <Esc>:redo<CR>
+
+" Save file as sudo
+ca w!! %!sudo tee %
