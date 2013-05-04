@@ -1,3 +1,7 @@
+" Jaapz's vim config.
+"
+
+" Load pathogen plugin management
 call pathogen#runtime_append_all_bundles()
 call pathogen#helptags()
 call pathogen#infect()
@@ -5,23 +9,29 @@ call pathogen#infect()
 " Random basic settings
 let g:tagbar_usearrows = 1
 let mapleader = ","
-set mouse=a
+set number " Always show line numbers
+set nocompatible " No vi compatibility
+set cursorline " Highlight current line
+
+" Search settings
+set hlsearch
+set incsearch
+
+" Pythonic indents
 set shiftwidth=4
-set number
 set autoindent
 set smarttab
-set tabstop=4
 set expandtab
-set incsearch
-set hlsearch
-set noswapfile
-set nowritebackup 
-set nocompatible
+set tabstop=4
+set softtabstop=4
+
+" Correct unicode encoding
 set encoding=utf-8
 set termencoding=utf-8
-set laststatus=2
-set cursorline
-set textwidth=120
+
+" No backups and swapfiles
+set noswapfile
+set nowritebackup 
 
 " Gui (gVim) options
 set guioptions-=m " No menu bar
@@ -30,7 +40,7 @@ set guioptions-=r " No right-hand side scrollbar
 set guioptions-=L " No left-hand side scrollbar
 set linespace=3 " Nicer lineheight
 
-" Make sure F11 also works in gVim
+" Hack to make sure F11 also works in gVim
 map <silent> <F11>
 \    :call system("wmctrl -ir " . v:windowid . " -b toggle,fullscreen")<CR>
 
@@ -46,6 +56,7 @@ set t_Co=256
 " Vim powerline config
 let g:Powerline_symbols = 'unicode'
 let g:Powerline_colorscheme = 'solarized256'
+set laststatus=2 " Always show statusline
 
 " Enable pyflakes
 filetype on
@@ -58,9 +69,6 @@ noremap <leader>c <Esc>:TagbarShowTag<CR>
 " NERDTree
 noremap <leader>z <Esc>:NERDTreeToggle<CR>
 noremap <leader>a <Esc>:NERDTreeFind<CR>
-
-" CommandT
-noremap <leader>t <Esc>:CommandT<CR>
 
 " Tabs
 noremap <leader>/ <Esc>:tabn<CR>
