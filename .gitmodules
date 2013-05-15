@@ -43,3 +43,6 @@
 [submodule "vim/bundle/easytags"]
 	path = vim/bundle/easytags
 	url = git://github.com/xolox/vim-easytags.git
+[submodule "vim/bundle/pydocstring"]
+	path = vim/bundle/pydocstring
+	url = git://github.com/heavenshell/vim-pydocstring.git
