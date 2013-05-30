@@ -7,7 +7,6 @@ call pathogen#helptags()
 call pathogen#infect()
 
 " Random basic settings
-let g:tagbar_usearrows = 1
 let mapleader = ","
 set number " Always show line numbers
 set nocompatible " No vi compatibility
@@ -55,9 +54,6 @@ set linespace=3 " Nicer lineheight
 map <silent> <F11>
 \    :call system("wmctrl -ir " . v:windowid . " -b toggle,fullscreen")<CR>
 
-" Show git status in statusline
-set statusline+=%{fugitive#statusline()}
-
 " Enable colorscheme and 256 colors
 colorscheme molokai
 syntax on
@@ -75,10 +71,6 @@ let g:ctrlp_max_height = 20
 " Enable pyflakes
 filetype on
 filetype plugin on
-
-" TagBar
-noremap <leader>t <Esc>:TagbarToggle<CR>
-noremap <leader>y <Esc>:TagbarShowTag<CR>
 
 " NERDTree
 noremap <leader>z <Esc>:NERDTreeToggle<CR>

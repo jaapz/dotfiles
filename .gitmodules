@@ -1,9 +1,6 @@
 [submodule "vim/pathogen"]
     path = vim/pathogen
     url = git://github.com/tpope/vim-pathogen.git
-[submodule "vim/bundle/tagbar"]
-	path = vim/bundle/tagbar
-	url = git://github.com/majutsushi/tagbar.git
 [submodule "vim/bundle/better-css-syntax"]
 	path = vim/bundle/better-css-syntax
 	url = git://github.com/vim-scripts/Better-CSS-Syntax-for-Vim.git
@@ -43,3 +40,6 @@
 [submodule "vim/bundle/pydocstring"]
 	path = vim/bundle/pydocstring
 	url = git://github.com/heavenshell/vim-pydocstring.git
+[submodule "vim/bundle/hgrev"]
+	path = vim/bundle/hgrev
+	url = git://github.com/vim-scripts/hgrev.git
