@@ -61,7 +61,7 @@ set term=xterm-256color
 set t_Co=256
 
 " Vim powerline config
-let g:Powerline_symbols = 'unicode'
+let g:Powerline_symbols = 'fancy'
 let g:Powerline_colorscheme = 'solarized256'
 set laststatus=2 " Always show statusline
 
