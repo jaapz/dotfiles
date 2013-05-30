@@ -49,3 +49,5 @@ export TERM="xterm-256color"
 # Useful aliases
 alias scon="php app/console" # symfony2 console
 alias fucking="sudo" # JUST DO EEET FFS
+alias :q='exit'
+alias v='vim'
