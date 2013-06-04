@@ -39,6 +39,9 @@ set wildignore+=node_modules
 set textwidth=80
 set colorcolumn=80
 
+" Only wrap comments
+set formatoptions-=t
+
 " No backups and swapfiles
 set noswapfile
 set nowritebackup 
@@ -65,7 +68,7 @@ let g:Powerline_symbols = 'fancy'
 let g:Powerline_colorscheme = 'solarized256'
 set laststatus=2 " Always show statusline
 
-" CtrlP cobfig
+" CtrlP config
 let g:ctrlp_max_height = 20
 
 " Enable pyflakes
