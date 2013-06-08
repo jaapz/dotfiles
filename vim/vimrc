@@ -39,6 +39,9 @@ set wildignore+=node_modules
 set textwidth=80
 set colorcolumn=80
 
+" Only wrap comments
+set formatoptions-=t
+
 " No backups and swapfiles
 set noswapfile
 set nowritebackup 
@@ -65,7 +68,7 @@ let g:Powerline_symbols = 'unicode'
 let g:Powerline_colorscheme = 'solarized256'
 set laststatus=2 " Always show statusline
 
-" CtrlP cobfig
+" CtrlP config
 let g:ctrlp_max_height = 20
 
 " Enable pyflakes
@@ -77,14 +80,14 @@ noremap <leader>z <Esc>:NERDTreeToggle<CR>
 noremap <leader>a <Esc>:NERDTreeFind<CR>
 
 " Tabs
-noremap <leader>/ <Esc>:tabn<CR>
-noremap <leader>. <Esc>:tabp<CR>
-noremap <leader>p <Esc>:tabnew<CR>
-noremap <leader>o <Esc>:tabclose<CR>
+inoremap <leader>/ <Esc>:tabn<CR>
+inoremap <leader>. <Esc>:tabp<CR>
+inoremap <leader>p <Esc>:tabnew<CR>
+inoremap <leader>o <Esc>:tabclose<CR>
 
 " Undo/Redo
-noremap <leader>u <Esc>:undo<CR>
-noremap <leader>r <Esc>:redo<CR>
+inoremap <leader>u <Esc>:undo<CR>
+inoremap <leader>r <Esc>:redo<CR>
 
 " Save file as sudo
 ca w!! %!sudo tee %
