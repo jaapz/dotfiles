@@ -80,14 +80,14 @@ noremap <leader>z <Esc>:NERDTreeToggle<CR>
 noremap <leader>a <Esc>:NERDTreeFind<CR>
 
 " Tabs
-inoremap <leader>/ <Esc>:tabn<CR>
-inoremap <leader>. <Esc>:tabp<CR>
-inoremap <leader>p <Esc>:tabnew<CR>
-inoremap <leader>o <Esc>:tabclose<CR>
+noremap <leader>/ <Esc>:tabn<CR>
+noremap <leader>. <Esc>:tabp<CR>
+noremap <leader>p <Esc>:tabnew<CR>
+noremap <leader>o <Esc>:tabclose<CR>
 
 " Undo/Redo
-inoremap <leader>u <Esc>:undo<CR>
-inoremap <leader>r <Esc>:redo<CR>
+noremap <leader>u <Esc>:undo<CR>
+noremap <leader>r <Esc>:redo<CR>
 
 " Save file as sudo
 ca w!! %!sudo tee %
