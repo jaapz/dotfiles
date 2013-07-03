@@ -1,10 +1,11 @@
 " Jaapz's vim config.
 "
+filetype off
 
 " Load pathogen plugin management
 call pathogen#runtime_append_all_bundles()
-call pathogen#helptags()
 call pathogen#infect()
+call pathogen#helptags()
 
 " Random basic settings
 let mapleader = ","
@@ -64,7 +65,7 @@ set term=xterm-256color
 set t_Co=256
 
 " Vim powerline config
-let g:Powerline_symbols = 'unicode'
+let g:Powerline_symbols = 'fancy'
 let g:Powerline_colorscheme = 'solarized256'
 set laststatus=2 " Always show statusline
 
@@ -73,7 +74,12 @@ let g:ctrlp_max_height = 20
 
 " Enable pyflakes
 filetype on
-filetype plugin on
+filetype plugin indent on
+
+" Python mode settings
+let g:pymode_lint_checker = "pyflakes,pylint,pep8"
+let g:pymode_lint_cwindow = 0
+let g:pymode_lint_ignore = "F0401"
 
 " NERDTree
 noremap <leader>z <Esc>:NERDTreeToggle<CR>
