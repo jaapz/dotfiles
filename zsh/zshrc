@@ -51,4 +51,5 @@ alias scon="php app/console" # symfony2 console
 alias fucking="sudo" # JUST DO EEET FFS
 alias :q='exit'
 alias v="vim --remote-tab"
+alias g="gvim --remote-tab"
 alias vims="vim --servername VIM"

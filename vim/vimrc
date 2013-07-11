@@ -53,6 +53,7 @@ set guioptions-=T " No toolbar
 set guioptions-=r " No right-hand side scrollbar
 set guioptions-=L " No left-hand side scrollbar
 set linespace=3 " Nicer lineheight
+set guifont=Menlo\ for\ Powerline\ 10
 
 " Hack to make sure F11 also works in gVim
 map <silent> <F11>
@@ -65,9 +66,10 @@ set term=xterm-256color
 set t_Co=256
 
 " Vim powerline config
-let g:Powerline_symbols = 'unicode'
+let g:Powerline_symbols = 'compatible'
 let g:Powerline_colorscheme = 'solarized256'
 set laststatus=2 " Always show statusline
+set noshowmode
 
 " CtrlP config
 let g:ctrlp_max_height = 20
