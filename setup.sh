@@ -7,7 +7,7 @@
 basedir=$PWD
 
 # We seriously need these packages for some commands in this script.
-apt-get install -y  git-core bzr mercurial;
+sudo apt-get install -y  git-core bzr mercurial;
 
 # All packages that need to be installed at the end of
 # this script.
@@ -17,7 +17,7 @@ packages=""
 mv ~/.vimrc ~/.vimrc-old
 ln -s $PWD/vim/vimrc ~/.vimrc
 ln -s $PWD/vim ~/.vim
-packages="$packages vim"
+packages="$packages vim gvim"
 
 # Make sure to update vim pathogen bundles.
 cd ~/.vim/bundle
@@ -35,6 +35,11 @@ packages="$packages mopidy ncmpc"
 mv ~/.conkyrc ~/.conkyrc-old
 ln -s $PWD/conky/conkyrc ~/.conkyrc
 packages="$packages conky"
+
+# tmux
+mv ~/.tmux.conf ~/.tmux.conf-old
+ln -s $PWD/tmux/tmux.conf ~/.tmux.conf
+packages="$pacakges tmux"
 
 # Chrome.
 wget -q -O - https://dl-ssl.google.com/linux/linux_signing_key.pub | apt-key add -
@@ -64,8 +69,8 @@ packages="$packages aptitude"
 echo "Installing packages: $packages"
 
 # Install ALL the packages.
-apt-get update
-apt-get install -y $packages
+sudo apt-get update
+sudo apt-get install --force-yes -y $packages
 
 # Quit with a nice message.
 echo "Everything is installed, make sure you set up the mopidy spotify settings correctly!"

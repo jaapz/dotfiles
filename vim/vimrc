@@ -35,6 +35,8 @@ set cursorline
 set wildignore+=__pycache__
 set wildignore+=*.pyc
 set wildignore+=node_modules
+set wildignore+=*/vendor/*
+set wildignore+=*/app/cache/*
 
 " Show max text width
 set textwidth=80
@@ -53,7 +55,7 @@ set guioptions-=T " No toolbar
 set guioptions-=r " No right-hand side scrollbar
 set guioptions-=L " No left-hand side scrollbar
 set linespace=3 " Nicer lineheight
-set guifont=Menlo\ for\ Powerline\ 10
+set guifont=Inconsolata-dz\ for\ Powerline\ Medium\ 10
 
 " Hack to make sure F11 also works in gVim
 map <silent> <F11>
