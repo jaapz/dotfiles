@@ -53,3 +53,27 @@ alias :q='exit'
 alias v="vim --remote-tab"
 alias g="gvim --remote-tab"
 alias vims="vim --servername VIM"
+alias vbm-update-cache="vbm \"app/update-cache.sh --prod\""
+
+# Push files from local directory to both vbm servers.
+function push-vbm () {
+    scp $1 sshvbmdev@server01.sst-hosting.nl:$1
+    scp $1 sshvbmdev@server02.sst-hosting.nl:$1
+}
+
+function demo-skk () {
+    scp $1 demo-skk@silkekinderkleding.nl:~/web/$1
+}
+
+function live-skk () {
+    scp $1 www-skk@silkekinderkleding.nl:~/web/$1
+}
+
+function push-ssh-key () {
+    cat ~/.ssh/id_rsa.pub | ssh $1 'cat >> .ssh/authorized_keys'
+}
+
+function vbm (){
+    ssh sshvbmdev@server01.sst-hosting.nl $1
+    ssh sshvbmdev@server02.sst-hosting.nl $1
+}

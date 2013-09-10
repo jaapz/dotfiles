@@ -39,7 +39,7 @@ packages="$packages conky"
 # tmux
 mv ~/.tmux.conf ~/.tmux.conf-old
 ln -s $PWD/tmux/tmux.conf ~/.tmux.conf
-packages="$pacakges tmux"
+packages="$packages tmux"
 
 # Chrome.
 wget -q -O - https://dl-ssl.google.com/linux/linux_signing_key.pub | apt-key add -

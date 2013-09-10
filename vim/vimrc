@@ -35,8 +35,8 @@ set cursorline
 set wildignore+=__pycache__
 set wildignore+=*.pyc
 set wildignore+=node_modules
-set wildignore+=*/vendor/*
 set wildignore+=*/app/cache/*
+set wildignore+=*/vendor/*
 
 " Show max text width
 set textwidth=80
@@ -101,3 +101,6 @@ noremap <leader>r <Esc>:redo<CR>
 
 " Save file as sudo
 ca w!! %!sudo tee %
+
+" Handy commands
+com W w
