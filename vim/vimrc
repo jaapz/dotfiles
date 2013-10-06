@@ -99,6 +99,10 @@ noremap <leader>o <Esc>:tabclose<CR>
 noremap <leader>u <Esc>:undo<CR>
 noremap <leader>r <Esc>:redo<CR>
 
+noremap <leader>s <Esc>:w<CR>
+inoremap <leader>s <Esc>:w<CR>
+vnoremap <leader>s <Esc>:w<CR>
+
 " Save file as sudo
 ca w!! %!sudo tee %
 

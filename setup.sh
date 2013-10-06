@@ -53,7 +53,7 @@ ln -s $PWD/zsh/zshrc ~/.zshrc
 packages="$packages zsh"
 
 # Theme for zsh also needs hg-prompt.
-hg clone http://bitbucket.org/sjl/hg-prompt/ ~/.hg-prompt
+#hg clone http://bitbucket.org/sjl/hg-prompt/ ~/.hg-prompt
 # TODO: add hgrc and add hg-promp as an extension.
 
 # Terminator
@@ -62,6 +62,7 @@ ln -s $PWD/terminator/config ~/.config/terminator/config
 packages="$packages terminator"
 
 # TODO: install virtualenv, virtualenvwrapper
+packages="$packages python-virtualenv"
 
 # Other packages.
 packages="$packages aptitude"
