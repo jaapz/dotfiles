@@ -27,12 +27,16 @@ ZSH_THEME="steeef"
 # DISABLE_AUTO_TITLE="true"
 
 # Uncomment following line if you want red dots to be displayed while waiting for completion
-# COMPLETION_WAITING_DOTS="true"
+COMPLETION_WAITING_DOTS="true"
+
+# Autostart tmux
+# ZSH_TMUX_AUTOSTART="true"
+# ZSH_TMUX_AUTOCONNECT="true"
 
 # Which plugins would you like to load? (plugins can be found in ~/.oh-my-zsh/plugins/*)
 # Custom plugins may be added to ~/.oh-my-zsh/custom/plugins/
 # Example format: plugins=(rails git textmate ruby lighthouse)
-plugins=(git)
+plugins=(git git-extras battery extract colorize python urltools)
 
 source $ZSH/oh-my-zsh.sh
 
@@ -69,13 +73,19 @@ function live-skk () {
     scp $1 www-skk@silkekinderkleding.nl:~/web/$1
 }
 
-function push-ssh-key () {
-    cat ~/.ssh/id_rsa.pub | ssh $1 'cat >> .ssh/authorized_keys'
-}
-
 function vbm (){
     ssh sshvbmdev@server01.sst-hosting.nl $1
     ssh sshvbmdev@server02.sst-hosting.nl $1
 }
 
 source ~/other/virtualenv-tools/virtualenv.sh
+source ~/other/zsh-scripts/start-ssh-agent.sh
+source ~/other/zsh-scripts/autostart-tmux.sh
+source ~/other/zsh-scripts/push-ssh-key.sh
+
+function syncer() {
+    cd ~/programming/syncer
+    export SYNCER_ENV=prod
+    activate
+    pynt setup
+}

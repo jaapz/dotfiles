@@ -7,6 +7,8 @@ call pathogen#runtime_append_all_bundles()
 call pathogen#infect()
 call pathogen#helptags()
 
+source ~/.vim/plugins/autotag.vim
+
 " Random basic settings
 let mapleader = ","
 set number " Always show line numbers
@@ -102,6 +104,12 @@ noremap <leader>r <Esc>:redo<CR>
 noremap <leader>s <Esc>:w<CR>
 inoremap <leader>s <Esc>:w<CR>
 vnoremap <leader>s <Esc>:w<CR>
+
+" Nice method switching
+map <leader>l <Esc>[mzz
+map <leader>; <Esc>]mzz
+
+map <leader>t :CtrlPTag<cr>
 
 " Save file as sudo
 ca w!! %!sudo tee %
