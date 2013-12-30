@@ -84,8 +84,30 @@ source ~/other/zsh-scripts/autostart-tmux.sh
 source ~/other/zsh-scripts/push-ssh-key.sh
 
 function syncer() {
+    if [ -n $1 ]; then
+        ENV=$1
+    else
+        ENV='prod'
+    fi
+
     cd ~/programming/syncer
-    export SYNCER_ENV=prod
+    export SYNCER_ENV=$ENV
     activate
     pynt setup
 }
+
+function mbo() {
+    if [ -n $1 ]; then
+        ENV=$1
+    else
+        ENV='prod'
+    fi
+
+    cd ~/programming/mijnbaopt
+    export MIJNBAOPT_ENV=$ENV
+    export MIJNBAOPT_DIR='/home/jaapz/programming/mijnbaopt'
+    export MIJNBAOPT_VENV='/home/jaapz/programming/mijnbaopt/.env'
+    activate
+}
+
+start-tmux ide

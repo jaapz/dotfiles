@@ -106,8 +106,8 @@ inoremap <leader>s <Esc>:w<CR>
 vnoremap <leader>s <Esc>:w<CR>
 
 " Nice method switching
-map <leader>l <Esc>[mzz
-map <leader>; <Esc>]mzz
+map <leader>l <Esc>{zz
+map <leader>; <Esc>}zz
 
 map <leader>t :CtrlPTag<cr>
 
