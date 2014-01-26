@@ -65,23 +65,17 @@ function push-vbm () {
     scp $1 sshvbmdev@server02.sst-hosting.nl:$1
 }
 
-function demo-skk () {
-    scp $1 demo-skk@silkekinderkleding.nl:~/web/$1
-}
-
-function live-skk () {
-    scp $1 www-skk@silkekinderkleding.nl:~/web/$1
-}
-
 function vbm (){
     ssh sshvbmdev@server01.sst-hosting.nl $1
     ssh sshvbmdev@server02.sst-hosting.nl $1
 }
 
-source ~/other/virtualenv-tools/virtualenv.sh
-source ~/other/zsh-scripts/start-ssh-agent.sh
-source ~/other/zsh-scripts/autostart-tmux.sh
-source ~/other/zsh-scripts/push-ssh-key.sh
+source ~/.skk-helper-functions.sh
+
+source ~/programming/other/virtualenv-tools/virtualenv.sh
+source ~/programming/other/zsh-scripts/start-ssh-agent.sh
+source ~/programming/other/zsh-scripts/autostart-tmux.sh
+source ~/programming/other/zsh-scripts/push-ssh-key.sh
 
 function syncer() {
     if [ -n $1 ]; then
