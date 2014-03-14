@@ -116,3 +116,14 @@ ca w!! %!sudo tee %
 
 " Handy commands
 com W w
+
+" Copy and Paste to system clipboard
+vmap <leader>c "+y
+vmap <leader>x "+c
+map <leader>v <Esc>v"+p
+
+" Unmap arrow keys
+map <Left> <Nop>
+map <Right> <Nop>
+map <Up> <Nop>
+map <Down> <Nop>
