@@ -46,9 +46,12 @@ export PATH=/usr/lib/lightdm/lightdm:/usr/local/sbin:/usr/local/bin:/usr/sbin:/u
 ### Added by the Heroku Toolbelt
 #export PATH="/usr/local/heroku/bin:$PATH"
 #source /usr/local/bin/virtualenvwrapper.sh
-
-# Make sure the colors are used correctly in vim and the like.
-export TERM="screen-256color"
+#
+if [ -n "$TMUX" ]; then
+    export TERM=screen-256color
+else
+    export TERM=gnome-256color
+fi
 
 # Useful aliases
 alias scon="php app/console" # symfony2 console

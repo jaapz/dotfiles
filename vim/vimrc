@@ -66,7 +66,6 @@ map <silent> <F11>
 " Enable colorscheme and 256 colors
 colorscheme molokai
 syntax on
-set term=xterm-256color
 set t_Co=256
 
 " Vim powerline config
