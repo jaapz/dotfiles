@@ -1,15 +1,15 @@
 # Describe
-snippet d [des] describe("...". function() { ... });
-	describe("${1:description}", function() {
+snippet d [des] describe('...'. function() { ... });
+	describe('${1:description}', function() {
 		${2}
 	});${3}
 snippet des
-	describe("${1:description}", function() {
+	describe('${1:description}', function() {
 		${2}
 	});${3}
 
 # Describe with beforeEach and it
-snippet d [desc] describe("...". function() { beforeEach()... it...});
+snippet d [desc] describe('...'. function() { beforeEach()... it...});
 	describe('${1:when...}', function () {
 		beforeEach(function () {
 			${2}
@@ -31,12 +31,12 @@ snippet desc
 	});
 
 # It
-snippet i it("...", function() { ... });...
-	it("${1:description}", function() {
+snippet i it('...', function() { ... });...
+	it('${1:description}', function() {
 		${2}
 	});${3}
-snippet it it("...", function() { ... });...
-	it("${1:description}", function() {
+snippet it it('...', function() { ... });...
+	it('${1:description}', function() {
 		${2}
 	});${3}
 
