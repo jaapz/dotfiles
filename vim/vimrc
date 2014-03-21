@@ -57,7 +57,7 @@ set guioptions-=T " No toolbar
 set guioptions-=r " No right-hand side scrollbar
 set guioptions-=L " No left-hand side scrollbar
 set linespace=3 " Nicer lineheight
-set guifont=Inconsolata-dz\ for\ Powerline\ Medium\ 10
+set guifont=Monospace\ 10
 
 " Hack to make sure F11 also works in gVim
 map <silent> <F11>
