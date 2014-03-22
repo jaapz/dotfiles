@@ -59,6 +59,7 @@ alias :q='exit'
 alias v="vim --remote-tab"
 alias g="gvim --remote-tab"
 alias vims="vim --servername VIM"
+alias pynt="noglob pynt"
 alias tests="pynt tests"
 alias karma="pynt js"
 
