@@ -16,5 +16,6 @@ License
 If anyone would ever like to use any of the configs and dotfiles in this
 repo, that is no problem at all. Just to be sure i hereby declare that
 under the powers invested in me by myself, this repo is available in the
-public domain. Do what you want with it.
-
+public domain. Do what you want with it. And if something of yours breaks when
+using any of the scripts in this repository, that is totally and completely your
+own fault, not mine.
