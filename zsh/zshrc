@@ -54,26 +54,13 @@ else
 fi
 
 # Useful aliases
-alias scon="php app/console" # symfony2 console
 alias fucking="sudo" # JUST DO EEET FFS
 alias :q='exit'
 alias v="vim --remote-tab"
 alias g="gvim --remote-tab"
 alias vims="vim --servername VIM"
-alias vbm-update-cache="vbm \"app/update-cache.sh --prod\""
-
-# Push files from local directory to both vbm servers.
-function push-vbm () {
-    scp $1 sshvbmdev@server01.sst-hosting.nl:$1
-    scp $1 sshvbmdev@server02.sst-hosting.nl:$1
-}
-
-function vbm (){
-    ssh sshvbmdev@server01.sst-hosting.nl $1
-    ssh sshvbmdev@server02.sst-hosting.nl $1
-}
-
-source ~/.skk-helper-functions.sh
+alias tests="pynt tests"
+alias karma="pynt js"
 
 source ~/programming/other/virtualenv-tools/virtualenv.sh
 source ~/programming/other/zsh-scripts/start-ssh-agent.sh
