@@ -86,6 +86,14 @@ let g:pymode_lint_checker = "pyflakes,pylint,pep8"
 let g:pymode_lint_cwindow = 0
 let g:pymode_lint_ignore = "F0401"
 
+" Neocomplete
+autocmd FileType css setlocal omnifunc=csscomplete#CompleteCSS
+autocmd FileType html,markdown setlocal omnifunc=htmlcomplete#CompleteTags
+autocmd FileType javascript setlocal omnifunc=javascriptcomplete#CompleteJS
+autocmd FileType python setlocal omnifunc=pythoncomplete#Complete
+
+let g:neocomplete#enable_at_startup = 1
+
 " NERDTree
 noremap <leader>z <Esc>:NERDTreeToggle<CR>
 noremap <leader>a <Esc>:NERDTreeFind<CR>
