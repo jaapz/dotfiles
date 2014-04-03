@@ -19,6 +19,9 @@ set cursorline " Highlight current line
 set hlsearch
 set incsearch
 
+" Split the Correct(tm) way.
+set splitright
+
 " Pythonic indents
 set shiftwidth=4
 set autoindent
@@ -93,6 +96,7 @@ autocmd FileType javascript setlocal omnifunc=javascriptcomplete#CompleteJS
 autocmd FileType python setlocal omnifunc=pythoncomplete#Complete
 
 let g:neocomplete#enable_at_startup = 1
+set completeopt-=preview
 
 " NERDTree
 noremap <leader>z <Esc>:NERDTreeToggle<CR>
