@@ -62,6 +62,7 @@ alias vims="vim --servername VIM"
 alias pynt="noglob pynt"
 alias tests="pynt tests"
 alias karma="pynt js"
+alias web="x-www-browser"
 
 source ~/programming/other/virtualenv-tools/virtualenv.sh
 source ~/programming/other/zsh-scripts/start-ssh-agent.sh
