@@ -67,3 +67,6 @@
 [submodule "vim/bundle/neocomplete"]
 	path = vim/bundle/neocomplete
 	url = https://github.com/Shougo/neocomplete.vim
+[submodule "vim/bundle/tern"]
+	path = vim/bundle/tern
+	url = https://github.com/marijnh/tern_for_vim
