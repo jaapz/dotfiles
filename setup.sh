@@ -41,3 +41,9 @@ ln -s $PWD/zsh/zshrc ~/.zshrc
 # Terminator
 mkdir ~/.config/terminator
 ln -s $PWD/terminator/config ~/.config/terminator/config
+
+# i3wm
+mkdir ~/.i3
+ln -s $PWD/i3/config ~/.i3/config
+ln -s $PWD/i3/my-conky-i3bar-script.sh ~/.my-conky-i3bar-script.sh
+ln -s $PWD/i3/i3status.conf ~/.i3status.conf
