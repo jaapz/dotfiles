@@ -4,5 +4,5 @@ function! JavascriptFoldText()
 endfunction
 setlocal foldtext=JavascriptFoldText()
 
-" Clear conceal highlighting
+" Clear conceal highlighting.
 hi clear Conceal
