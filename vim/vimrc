@@ -22,6 +22,11 @@ set incsearch
 " Split the Correct(tm) way.
 set splitright
 
+" Conceallevels
+set conceallevel=2
+set concealcursor=nc
+let g:syntax_js=['function', 'return', 'semicolon', 'proto']
+
 " Pythonic indents
 set shiftwidth=4
 set autoindent
