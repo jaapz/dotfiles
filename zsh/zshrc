@@ -95,5 +95,3 @@ function mbo() {
     export MIJNBAOPT_VENV='/home/jaapz/programming/mijnbaopt/.env'
     activate
 }
-
-start-tmux ide
