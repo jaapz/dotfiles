@@ -68,6 +68,9 @@ set guioptions-=L " No left-hand side scrollbar
 set linespace=3 " Nicer lineheight
 set guifont=Monospace\ 10
 
+" Why is this not default.
+set backspace=indent,eol,start
+
 " Hack to make sure F11 also works in gVim
 map <silent> <F11>
 \    :call system("wmctrl -ir " . v:windowid . " -b toggle,fullscreen")<CR>
