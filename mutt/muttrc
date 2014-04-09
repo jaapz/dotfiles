@@ -1,0 +1,47 @@
+# General settings
+set mbox_type = Maildir
+set from = "jaapz.b@gmail.com"
+set realname = "Jaap Broekhuizen"
+set smtp_url = "smtp://jaapz.b@smtp.gmail.com:587/"
+
+# Gmail folders
+# set folder = "imaps://imap.gmail.com:993"
+set folder = ~/.maildir
+set spoolfile = "+INBOX"
+set postponed = "+[Gmail]/Drafts"
+set trash = "+[Gmail]/Trash"
+unset record
+
+mailboxes +INBOX
+
+# Local directories
+set header_cache = ~/.mutt/cache/headers
+set message_cachedir = ~/.mutt/cache/bodies
+set certificate_file = ~/.mutt/certificates
+
+set move = no  #Stop asking to "move read messages to mbox"!
+set imap_keepalive = 900
+
+# Sorting
+set sort_aux=last-date-received
+set sort=reverse-threads
+
+# Split-pane message viewing
+set pager_index_lines = 10
+
+# Keybindings
+bind editor <space> noop
+macro index d "<purge-message>" "Purge mail locally and remote"
+
+# Colorscheme
+source ~/programming/other/vombatidae-mutt/vombatidae.mutt
+
+# Signature
+set signature = "~/.signature"
+set sig_on_top = yes
+
+set check_new = yes
+set timeout = 15
+set mail_check = 30
+
+source ~/.mutt-passwords
