@@ -163,7 +163,7 @@ bar {
         position top
         #status_command i3status
         status_command $HOME/.my-conky-i3bar-script.sh
-        #output HDMI-0
+        output HDMI-0
 }
 
 # colors
