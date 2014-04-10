@@ -31,6 +31,8 @@ set pager_index_lines = 10
 
 # Keybindings
 bind editor <space> noop
+bind index <tab> previous-new-then-unread
+bind pager <tab> previous-new-then-unread
 macro index d "<purge-message>" "Purge mail locally and remote"
 
 # Colorscheme
@@ -43,5 +45,9 @@ set sig_on_top = yes
 set check_new = yes
 set timeout = 15
 set mail_check = 30
+
+# HTML Mail view
+auto_view text/html
+alternative_order text/plain text/enriched text/html
 
 source ~/.mutt-passwords
