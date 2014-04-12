@@ -26,3 +26,6 @@ xset r rate 250 25 &
 
 ## Turn on/off system beep
 xset b off &
+
+## Set background color.
+xsetroot -solid "#222222"
