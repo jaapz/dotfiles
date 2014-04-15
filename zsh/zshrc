@@ -107,3 +107,9 @@ function bam() {
     export ACCOUNTMANAGER_ENV=$ENV
     activate
 }
+
+function thesis() {
+    cd ~/documents/bachelor-thesis-report
+    mupdf ~/documents/bachelor-thesis-report/bachelor-thesis-report.pdf &
+    vim bachelor-thesis-report.tex
+}

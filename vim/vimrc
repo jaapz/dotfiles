@@ -9,6 +9,12 @@ call pathogen#helptags()
 
 source ~/.vim/plugins/autotag.vim
 
+" Auto-make latex
+if filereadable('Makefile')
+    setlocal makeprg=make\ pdf
+endif
+noremap <leader>b <Esc>:make<CR><CR><CR>
+
 " Random basic settings
 let mapleader = ","
 set number " Always show line numbers
@@ -88,6 +94,9 @@ set noshowmode
 
 " CtrlP config
 let g:ctrlp_max_height = 20
+map <leader>t :CtrlPTag<cr>
+map <C-b> :CtrlPBuffer<CR>
+
 
 " Enable pyflakes
 filetype on
@@ -123,12 +132,6 @@ noremap <leader>r <Esc>:redo<CR>
 noremap <leader>s <Esc>:w<CR>
 inoremap <leader>s <Esc>:w<CR>
 vnoremap <leader>s <Esc>:w<CR>
-
-" Nice method switching
-map <leader>l <Esc>{zz
-map <leader>; <Esc>}zz
-
-map <leader>t :CtrlPTag<cr>
 
 " Save file as sudo
 ca w!! %!sudo tee %
