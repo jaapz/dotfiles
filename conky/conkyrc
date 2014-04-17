@@ -16,12 +16,13 @@ cpu_avg_samples 2
 
 TEXT
 
-[${if_mpd_playing}{"full_text": "$mpd_status $mpd_artist - $mpd_artist", "color": "\#ffffff"},${endif}
- {"full_text": "${fs_used /}/${fs_free /} free", "color": "\#ffffff"},
- {"full_text": "cpu ${cpu}%", "color": ${if_match ${memperc}<90}"\#ffffff"${else}"\#ff0000"${endif}},
- {"full_text": "ram ${memperc}%", "color": ${if_match ${memperc}<90}"\#ffffff"${else}"\#ff0000"${endif}},
- {"full_text": "vol ${exec pactl list sinks | grep "Volume: 0"| tail -n 1 | awk '{print substr($3, 1, index($3, "%") - 1)}'}%", "color": "\#ffffff"},
- {"full_text": "bat ${battery_percent BAT1}%"},
- {"full_text": "${time %a %d-%m-%y}", "color": "\#ffffff"},
- {"full_text": "${time %H:%M}", "color": "\#ffffff"}
+[{"full_text": "${new_mails /home/jaapz/.maildir/INBOX} new mails", "color": "\#e9da8c"},
+ ${if_mpd_playing}{"full_text": "${if_match "${mpd_status}" == "Playing"}▶${endif} $mpd_title - $mpd_artist", "color": "\#daf0ff"},${endif}
+ {"full_text": "${fs_used /}/${fs_free /} free", "color": "\#c7c7c7"},
+ {"full_text": "cpu ${cpu}%", "color": ${if_match ${memperc}<90}"\#c7c7c7"${else}"\#ff0000"${endif}},
+ {"full_text": "ram ${memperc}%", "color": ${if_match ${memperc}<90}"\#c7c7c7"${else}"\#ff0000"${endif}},
+ {"full_text": "vol ${exec pactl list sinks | grep "Volume: 0"| tail -n 1 | awk '{print substr($3, 1, index($3, "%") - 1)}'}%", "color": "\#c7c7c7"},
+ {"full_text": "bat ${battery_percent BAT1}%", "color": "\#c7c7c7"},
+ {"full_text": "${time %a %d-%m-%y}"},
+ {"full_text": "${time %H:%M}"}
 ],
