@@ -1,18 +1,30 @@
 # General settings
 set mbox_type = Maildir
 set from = "jaapz.b@gmail.com"
+alternates jaap@broekhuizen.nu broekhuizen@baopt.nl
 set realname = "Jaap Broekhuizen"
 set smtp_url = "smtp://jaapz.b@smtp.gmail.com:587/"
+set tilde
+set include
+set reverse_name
+set reply_to
+set forward_quote
 
 # Gmail folders
 # set folder = "imaps://imap.gmail.com:993"
 set folder = ~/.maildir
 set spoolfile = "+INBOX"
 set postponed = "+[Gmail]/Drafts"
-set trash = "+[Gmail]/Trash"
+set trash = "+[Gmail].Trash"
 unset record
 
-mailboxes +INBOX
+mailboxes +INBOX \
+          +Afstuderen \
+          +BaOpt \
+          +Persoonlijk \
+          +Github \
+          +[Gmail].Trash \
+
 
 # Local directories
 set header_cache = ~/.mutt/cache/headers
@@ -45,6 +57,19 @@ set sig_on_top = yes
 set check_new = yes
 set timeout = 15
 set mail_check = 30
+
+# Sidebar
+set sidebar_delim   = ' │ '
+set sidebar_visible = yes
+set sidebar_width   = 24
+color sidebar_new color221 color233
+bind index,pager J   sidebar-next
+bind index,pager K     sidebar-prev
+bind index,pager L  sidebar-open
+
+# Statusline
+set status_chars  = " *%A"
+set status_format = "───[ Folder: %f ]───[%r%m messages%?n? (%n new)?%?d? (%d to delete)?%?t? (%t tagged)? ]───%>─%?p?( %p postponed )?───"
 
 # HTML Mail view
 auto_view text/html
