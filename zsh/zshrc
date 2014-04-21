@@ -64,10 +64,10 @@ alias tests="pynt tests"
 alias karma="pynt js"
 alias web="x-www-browser"
 
-source ~/programming/other/virtualenv-tools/virtualenv.sh
-source ~/programming/other/zsh-scripts/start-ssh-agent.sh
-source ~/programming/other/zsh-scripts/autostart-tmux.sh
-source ~/programming/other/zsh-scripts/push-ssh-key.sh
+source ~/virtualenv-tools/virtualenv.sh
+source ~/zsh-scripts/start-ssh-agent.sh
+source ~/zsh-scripts/autostart-tmux.sh
+source ~/zsh-scripts/push-ssh-key.sh
 
 function syncer() {
     if [ -n $1 ]; then
