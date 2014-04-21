@@ -9,18 +9,15 @@ call pathogen#helptags()
 
 source ~/.vim/plugins/autotag.vim
 
-" Auto-make latex
-if filereadable('Makefile')
-    setlocal makeprg=make\ pdf
-endif
-noremap <leader>b <Esc>:make<CR><CR><CR>
-
 " Random basic settings
 let mapleader = ","
 set number " Always show line numbers
 set nocompatible " No vi compatibility
 set cursorline " Highlight current line
 set so=5
+
+" Auto-make latex
+map <leader>b <Esc>:make pdf<CR><CR><CR>
 
 " Search settings
 set hlsearch
