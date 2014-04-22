@@ -21,8 +21,8 @@ unset record
 mailboxes +INBOX \
           +Afstuderen \
           +BaOpt \
-          +Persoonlijk \
           +Github \
+          +Persoonlijk \
           +[Gmail].Trash \
 
 
