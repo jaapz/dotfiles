@@ -23,7 +23,6 @@ mailboxes +INBOX \
           +BaOpt \
           +Persoonlijk \
           +Github \
-          +[Gmail].Trash \
 
 
 # Local directories
