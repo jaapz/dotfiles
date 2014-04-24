@@ -63,6 +63,9 @@ alias pynt="noglob pynt"
 alias tests="pynt tests"
 alias karma="pynt js"
 alias web="x-www-browser"
+alias irssi-remote="ssh jaapz@broekhuizen.nu -t 'tmux attach -t irssi'"
+alias todo="cat ~/todo"
+alias etodo="vim ~/todo"
 
 source ~/programming/other/virtualenv-tools/virtualenv.sh
 source ~/programming/other/zsh-scripts/start-ssh-agent.sh
