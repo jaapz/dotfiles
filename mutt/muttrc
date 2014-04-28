@@ -1,7 +1,7 @@
 # General settings
 set mbox_type = Maildir
 set from = "jaapz.b@gmail.com"
-alternates jaap@broekhuizen.nu broekhuizen@baopt.nl
+alternates jaap@broekhuizen.nu broekhuizen@baopt.nl mail@jaapbroekhuizen.nl
 set realname = "Jaap Broekhuizen"
 set smtp_url = "smtp://jaapz.b@smtp.gmail.com:587/"
 set tilde
@@ -24,6 +24,14 @@ mailboxes +INBOX \
           +Persoonlijk \
           +Github \
 
+# Profiles
+macro index \e1 ":set from=jaapz.b@gmail.com\n:set status_format = \"───[ Folder: %f (gmail) ]───[%r%m messages%?n? (%n new)?%?d? (%d to delete)?%?t? (%t tagged)? ]───%>─%?p?( %p postponed )?───\"\n\n" "Switch to jaapz.b@gmail.com"
+macro index \e2 ":set from=broekhuizen@baopt.nl\n:set status_format = \"───[ Folder: %f (baopt) ]───[%r%m messages%?n? (%n new)?%?d? (%d to delete)?%?t? (%t tagged)? ]───%>─%?p?( %p postponed )?───\"\n\n" "Switch to broekhuizen@baopt.nl"
+macro index \e3 ":set from=mail@jaapbroekhuizen.nl\n:set status_format = \"───[ Folder: %f (personal) ]───[%r%m messages%?n? (%n new)?%?d? (%d to delete)?%?t? (%t tagged)? ]───%>─%?p?( %p postponed )?───\"\n\n" "Switch to mail@jaapbroekhuizen.nl"
+
+folder-hook =INBOX 'push \e1'
+folder-hook =BaOpt 'push \e2'
+folder-hook =Persoonlijk 'push \e2'
 
 # Local directories
 set header_cache = ~/.mutt/cache/headers
