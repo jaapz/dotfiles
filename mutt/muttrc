@@ -10,6 +10,9 @@ set reverse_name
 set reply_to
 set forward_quote
 
+# Filter messages to add mail addresses to my alias file.
+set display_filter = ~/.mutt/add-aliases.sh
+
 # Gmail folders
 # set folder = "imaps://imap.gmail.com:993"
 set folder = ~/.maildir
@@ -81,5 +84,8 @@ set status_format = "───[ Folder: %f ]───[%r%m messages%?n? (%n new)
 # HTML Mail view
 auto_view text/html
 alternative_order text/plain text/enriched text/html
+
+source ~/.mutt/aliases
+set alias_file=~/.mutt/aliases
 
 source "openssl aes-256-cbc -d -salt -in ~/.mutt-passwords |"
