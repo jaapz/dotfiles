@@ -25,9 +25,9 @@ mailboxes +INBOX \
           +Github \
 
 # Profiles
-macro index \e1 ":set from=jaapz.b@gmail.com\n:set status_format = \"───[ Folder: %f (gmail) ]───[%r%m messages%?n? (%n new)?%?d? (%d to delete)?%?t? (%t tagged)? ]───%>─%?p?( %p postponed )?───\"\n\n" "Switch to jaapz.b@gmail.com"
-macro index \e2 ":set from=broekhuizen@baopt.nl\n:set status_format = \"───[ Folder: %f (baopt) ]───[%r%m messages%?n? (%n new)?%?d? (%d to delete)?%?t? (%t tagged)? ]───%>─%?p?( %p postponed )?───\"\n\n" "Switch to broekhuizen@baopt.nl"
-macro index \e3 ":set from=mail@jaapbroekhuizen.nl\n:set status_format = \"───[ Folder: %f (personal) ]───[%r%m messages%?n? (%n new)?%?d? (%d to delete)?%?t? (%t tagged)? ]───%>─%?p?( %p postponed )?───\"\n\n" "Switch to mail@jaapbroekhuizen.nl"
+macro index \e1 ":set from=jaapz.b@gmail.com\n:set signature =\"~/.signature\"\n:set status_format = \"───[ Folder: %f (gmail) ]───[%r%m messages%?n? (%n new)?%?d? (%d to delete)?%?t? (%t tagged)? ]───%>─%?p?( %p postponed )?───\"\n\n" "Switch to jaapz.b@gmail.com"
+macro index \e2 ":set from=broekhuizen@baopt.nl\n:set signature =\"~/.signature-baopt\"\n:set status_format = \"───[ Folder: %f (baopt) ]───[%r%m messages%?n? (%n new)?%?d? (%d to delete)?%?t? (%t tagged)? ]───%>─%?p?( %p postponed )?───\"\n\n" "Switch to broekhuizen@baopt.nl"
+macro index \e3 ":set from=mail@jaapbroekhuizen.nl\n:set signature =\"~/.signature-personal\"\n:set status_format = \"───[ Folder: %f (personal) ]───[%r%m messages%?n? (%n new)?%?d? (%d to delete)?%?t? (%t tagged)? ]───%>─%?p?( %p postponed )?───\"\n\n" "Switch to mail@jaapbroekhuizen.nl"
 
 folder-hook =INBOX 'push \e1'
 folder-hook =BaOpt 'push \e2'
