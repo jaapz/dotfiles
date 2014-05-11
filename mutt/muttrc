@@ -14,7 +14,6 @@ set forward_quote
 set display_filter = ~/.mutt/add-aliases.sh
 
 # Gmail folders
-# set folder = "imaps://imap.gmail.com:993"
 set folder = ~/.maildir
 set spoolfile = "+INBOX"
 set postponed = "+[Gmail]/Drafts"
@@ -24,8 +23,8 @@ unset record
 mailboxes +INBOX \
           +Afstuderen \
           +BaOpt \
-          +Persoonlijk \
           +Github \
+          +Personal \
 
 # Profiles
 macro index \e1 ":set from=jaapz.b@gmail.com\n:set signature =\"~/.signature\"\n:set status_format = \"───[ Folder: %f (gmail) ]───[%r%m messages%?n? (%n new)?%?d? (%d to delete)?%?t? (%t tagged)? ]───%>─%?p?( %p postponed )?───\"\n\n" "Switch to jaapz.b@gmail.com"
@@ -34,7 +33,7 @@ macro index \e3 ":set from=mail@jaapbroekhuizen.nl\n:set signature =\"~/.signatu
 
 folder-hook =INBOX 'push \e1'
 folder-hook =BaOpt 'push \e2'
-folder-hook =Persoonlijk 'push \e2'
+folder-hook =Personal 'push \e3'
 
 # Local directories
 set header_cache = ~/.mutt/cache/headers
@@ -55,7 +54,8 @@ set pager_index_lines = 10
 bind editor <space> noop
 bind index <tab> previous-new-then-unread
 bind pager <tab> previous-new-then-unread
-macro index d "<purge-message>" "Purge mail locally and remote"
+macro index \ed "<purge-message>" "Purge mail locally and remote"
+macro index d "<save-message>+Prullenbak<enter><sync-mailbox>" "copy message to the trash"
 
 # Colorscheme
 source ~/programming/other/vombatidae-mutt/vombatidae.mutt
