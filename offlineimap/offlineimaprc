@@ -1,0 +1,46 @@
+[general]
+accounts = Personal,Gmail
+ui = ttyui
+fsync = false
+pythonfile = ~/bin/offlineimap.py
+
+[Account Gmail]
+localrepository = Gmail-Local
+remoterepository = Gmail-Remote
+maxage = 25
+quick = 10
+
+[Account Personal]
+localrepository = Personal-Local
+remoterepository = Personal-Remote
+maxage = 25
+quick = 10
+
+[Repository Gmail-Local]
+type = Maildir
+localfolders = ~/.maildir
+folderfilter = lambda folder: folder not in ['Personal']
+
+[Repository Gmail-Remote]
+type = Gmail
+remoteuser = jaapz.b@gmail.com
+remotepasseval = unencrypt_password("~/.gmail-password")
+realdelete = no
+maxconnections = 3
+sslcacertfile = /etc/ssl/certs/ca-certificates.crt
+folderfilter = lambda folder: folder not in ['Personal']
+
+[Repository Personal-Local]
+type = Maildir
+localfolders = ~/.maildir
+nametrans = lambda folder: folder.replace('Personal', 'INBOX')
+
+[Repository Personal-Remote]
+type = IMAP
+remoteuser = jaapz
+remotehost = mail.broekhuizen.nu
+remotepasseval = unencrypt_password("~/.personal-password")
+realdelete = no
+maxconnections = 3
+ssl = yes
+nametrans = lambda folder: folder.replace('INBOX', 'Personal')

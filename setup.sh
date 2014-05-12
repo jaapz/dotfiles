@@ -9,6 +9,9 @@ basedir=$PWD
 # Install the core of my toolset.
 sudo apt-get install --force-yes -y  git-core bzr mercurial python-virtualenv python-pip zsh tmux conky vim-nox vim-gtk terminator surf i3 feh
 
+# useful scripts
+ln -s $PWD/bin ~/bin
+
 # Vim settings.
 mv ~/.vimrc ~/.vimrc-old
 ln -s $PWD/vim/vimrc ~/.vimrc
@@ -41,3 +44,10 @@ mkdir ~/.i3
 ln -s $PWD/i3/config ~/.i3/config
 ln -s $PWD/i3/my-conky-i3bar-script.sh ~/.my-conky-i3bar-script.sh
 ln -s $PWD/i3/i3status.conf ~/.i3status.conf
+
+# mutt
+ln -s $PWD/mutt ~/.mutt
+ln -s $PWD/mutt/muttrc ~/.muttrc
+
+# offlineimap
+ln -s $PWD/offlineimap/offlineimaprc ~/.offlineimaprc

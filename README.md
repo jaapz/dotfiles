@@ -10,6 +10,20 @@ The script does require root powers, so to run it you'd do:
 
     sudo ./setup.sh
 
+Passwords
+=========
+
+I encrypt my password files using openssl. To create an encrypted password file,
+do:
+
+   echo "mypassword" > ~/.gmail-password.before
+   cat ~/.gmail-password.before | openssl rsautl -encrypt -pubin -inkey ~/.ssh/id_rsa.pub.pem > ~/.gmail-password
+   rm ~/.gmail-password.before
+
+My encrypted password files are ~/.gmail-password and ~/.personal-password,
+which are used by offlineimap (in `~/.offlineimaprc`) to authenticate to my mail
+accounts.
+
 License
 =======
 

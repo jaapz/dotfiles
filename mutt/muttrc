@@ -3,7 +3,7 @@ set mbox_type = Maildir
 set from = "jaapz.b@gmail.com"
 alternates jaap@broekhuizen.nu broekhuizen@baopt.nl mail@jaapbroekhuizen.nl
 set realname = "Jaap Broekhuizen"
-set smtp_url = "smtp://jaapz.b@smtp.gmail.com:587/"
+set smtp_url = "smtp://jaapz@broekhuizen.nu:587/"
 set tilde
 set include
 set reverse_name
@@ -27,9 +27,9 @@ mailboxes +INBOX \
           +Personal \
 
 # Profiles
-macro index \e1 ":set from=jaapz.b@gmail.com\n:set signature =\"~/.signature\"\n:set status_format = \"───[ Folder: %f (gmail) ]───[%r%m messages%?n? (%n new)?%?d? (%d to delete)?%?t? (%t tagged)? ]───%>─%?p?( %p postponed )?───\"\n\n" "Switch to jaapz.b@gmail.com"
-macro index \e2 ":set from=broekhuizen@baopt.nl\n:set signature =\"~/.signature-baopt\"\n:set status_format = \"───[ Folder: %f (baopt) ]───[%r%m messages%?n? (%n new)?%?d? (%d to delete)?%?t? (%t tagged)? ]───%>─%?p?( %p postponed )?───\"\n\n" "Switch to broekhuizen@baopt.nl"
-macro index \e3 ":set from=mail@jaapbroekhuizen.nl\n:set signature =\"~/.signature-personal\"\n:set status_format = \"───[ Folder: %f (personal) ]───[%r%m messages%?n? (%n new)?%?d? (%d to delete)?%?t? (%t tagged)? ]───%>─%?p?( %p postponed )?───\"\n\n" "Switch to mail@jaapbroekhuizen.nl"
+macro index \e1 ":source ~/.mutt/gmail.muttrc\n" "Switch to jaapz.b@gmail.com"
+macro index \e2 ":source ~/.mutt/baopt.muttrc\n" "Switch to broekhuizen@baopt.nl"
+macro index \e3 ":source ~/.mutt/personal.muttrc\n" "Switch to mail@jaapbroekhuizen.nl"
 
 folder-hook =INBOX 'push \e1'
 folder-hook =BaOpt 'push \e2'
@@ -54,8 +54,7 @@ set pager_index_lines = 10
 bind editor <space> noop
 bind index <tab> previous-new-then-unread
 bind pager <tab> previous-new-then-unread
-macro index \ed "<purge-message>" "Purge mail locally and remote"
-macro index d "<save-message>+Prullenbak<enter><sync-mailbox>" "copy message to the trash"
+macro index d "<purge-message>" "Purge mail locally and remote"
 
 # Colorscheme
 source ~/programming/other/vombatidae-mutt/vombatidae.mutt
@@ -77,10 +76,6 @@ bind index,pager J   sidebar-next
 bind index,pager K     sidebar-prev
 bind index,pager L  sidebar-open
 
-# Statusline
-set status_chars  = " *%A"
-set status_format = "───[ Folder: %f ]───[%r%m messages%?n? (%n new)?%?d? (%d to delete)?%?t? (%t tagged)? ]───%>─%?p?( %p postponed )?───"
-
 # HTML Mail view
 auto_view text/html
 alternative_order text/plain text/enriched text/html
@@ -88,4 +83,4 @@ alternative_order text/plain text/enriched text/html
 source ~/.mutt/aliases
 set alias_file=~/.mutt/aliases
 
-source "openssl aes-256-cbc -d -salt -in ~/.mutt-passwords |"
+source "~/.mutt/gmail.muttrc"
