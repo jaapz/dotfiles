@@ -10,4 +10,4 @@ def unencrypt_password(filename):
         openssl rsa -in ~/.ssh/id_rsa -pubout > ~/.ssh/id_rsa.pub.pem
         openssl rsautl -encrypt -pubin -inkey ~/.ssh/id_rsa.pub.pem > ~/outputfile
     """
-    return os.popen("cat %s | openssl rsautl -decrypt -inkey ~/.ssh/id_rsa" % filename).read().rstrip()
+    return os.popen("cat %s | openssl rsautl -decrypt -inkey ~/.ssh/mail/id_rsa" % filename).read().rstrip()
