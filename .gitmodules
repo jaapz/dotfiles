@@ -31,9 +31,6 @@
 [submodule "vim/bundle/pydocstring"]
 	path = vim/bundle/pydocstring
 	url = git://github.com/heavenshell/vim-pydocstring.git
-[submodule "vim/bundle/hgrev"]
-	path = vim/bundle/hgrev
-	url = git://github.com/vim-scripts/hgrev.git
 [submodule "vim/bundle/virtualenv"]
 	path = vim/bundle/virtualenv
 	url = git://github.com/jmcantrell/vim-virtualenv.git
