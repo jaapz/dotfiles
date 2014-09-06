@@ -5,8 +5,10 @@
   [[default]]
     scrollbar_position = hidden
     scroll_on_keystroke = False
-    scrollback_infinite = True
+    use_system_font = False
     show_titlebar = False
+    font = DejaVu Sans Mono 10
+    scrollback_infinite = True
 [layouts]
   [[default]]
     [[[child1]]]

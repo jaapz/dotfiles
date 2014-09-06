@@ -66,6 +66,7 @@ alias web="x-www-browser"
 alias irssi-remote="ssh jaapz@broekhuizen.nu -t 'tmux attach -t irssi'"
 alias todo="cat ~/todo"
 alias etodo="vim ~/todo"
+alias chkmail="offlineimap -o"
 
 source ~/programming/other/virtualenv-tools/virtualenv.sh
 source ~/programming/other/zsh-scripts/start-ssh-agent.sh
