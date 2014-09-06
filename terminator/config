@@ -3,8 +3,9 @@
 [keybindings]
 [profiles]
   [[default]]
-    scroll_on_keystroke = False
     scrollbar_position = hidden
+    scroll_on_keystroke = False
+    scrollback_infinite = True
     show_titlebar = False
 [layouts]
   [[default]]

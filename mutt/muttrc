@@ -21,10 +21,8 @@ set trash = "+[Gmail].Trash"
 unset record
 
 mailboxes +INBOX \
-          +Afstuderen \
-          +BaOpt \
-          +Github \
           +Personal \
+          +BaOpt
 
 # Profiles
 macro index \e1 ":source ~/.mutt/gmail.muttrc\n" "Switch to jaapz.b@gmail.com"

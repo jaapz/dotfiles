@@ -59,8 +59,7 @@ set colorcolumn=80
 " Only wrap comments
 set formatoptions-=t
 
-" No backups and swapfiles
-set noswapfile
+" No backups
 set nowritebackup 
 
 " Gui (gVim) options
@@ -110,6 +109,14 @@ let g:pymode_lint_ignore = "F0401"
 autocmd FileType css setlocal omnifunc=csscomplete#CompleteCSS
 autocmd FileType html,markdown setlocal omnifunc=htmlcomplete#CompleteTags
 autocmd FileType python setlocal omnifunc=pythoncomplete#Complete
+
+if !exists('g:neocomplete#sources#omni#input_patterns')
+      let g:neocomplete#sources#omni#input_patterns = {}
+endif
+if !exists('g:neocomplete#force_omni_input_patterns')
+        let g:neocomplete#force_omni_input_patterns = {}
+endif
+let g:neocomplete#force_omni_input_patterns.javascript = '[^. \t]\.\w*'
 
 let g:neocomplete#enable_at_startup = 1
 set completeopt-=preview
