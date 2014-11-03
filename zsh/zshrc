@@ -80,7 +80,7 @@ function syncer() {
         ENV='prod'
     fi
 
-    cd ~/programming/syncer
+    cd ~/programmeren/syncer
     export SYNCER_ENV=$ENV
     activate
     pynt setup
@@ -93,10 +93,10 @@ function mbo() {
         ENV='prod'
     fi
 
-    cd ~/programming/mijnbaopt
+    cd ~/programmeren/mijnbaopt
     export MIJNBAOPT_ENV=$ENV
-    export MIJNBAOPT_DIR='/home/jaapz/programming/mijnbaopt'
-    export MIJNBAOPT_VENV='/home/jaapz/programming/mijnbaopt/.env'
+    export MIJNBAOPT_DIR='/home/jaapz/programmeren/mijnbaopt'
+    export MIJNBAOPT_VENV='/home/jaapz/programmeren/mijnbaopt/.env'
     activate
 }
 
@@ -107,13 +107,7 @@ function bam() {
         ENV='prod'
     fi
 
-    cd ~/programming/account-manager
+    cd ~/programmeren/account-manager
     export ACCOUNTMANAGER_ENV=$ENV
     activate
-}
-
-function thesis() {
-    cd ~/documents/bachelor-thesis-report
-    mupdf ~/documents/bachelor-thesis-report/bachelor-thesis-report.pdf &
-    vim bachelor-thesis-report.tex
 }

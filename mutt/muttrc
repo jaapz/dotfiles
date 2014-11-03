@@ -55,7 +55,7 @@ bind pager <tab> previous-new-then-unread
 macro index d "<purge-message>" "Purge mail locally and remote"
 
 # Colorscheme
-source ~/programming/other/vombatidae-mutt/vombatidae.mutt
+source ~/programmeren/vombatidae-mutt/vombatidae.mutt
 
 # Signature
 set signature = "~/.signature"

@@ -78,7 +78,8 @@ map <silent> <F11>
 \    :call system("wmctrl -ir " . v:windowid . " -b toggle,fullscreen")<CR>
 
 " Enable colorscheme and 256 colors
-colorscheme molokai
+" colorscheme molokai
+colorscheme vombatidae
 syntax on
 set t_Co=256
 
