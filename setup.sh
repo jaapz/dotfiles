@@ -7,10 +7,12 @@
 basedir=$PWD
 
 # Install the core of my toolset.
-sudo apt-get install --force-yes -y  git-core bzr mercurial python-virtualenv python-pip zsh tmux conky vim-nox vim-gtk terminator surf i3 feh
+sudo apt-get install --force-yes -y  git-core bzr mercurial python-virtualenv python-pip zsh tmux conky vim-nox vim-gtk terminator i3 feh
 
 # useful scripts
+mv ~/bin ~/oldbin
 ln -s $PWD/bin ~/bin
+mv ~/oldbin/* ~/bin
 
 # Vim settings.
 mv ~/.vimrc ~/.vimrc-old

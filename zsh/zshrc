@@ -50,7 +50,7 @@ export PATH=/usr/lib/lightdm/lightdm:/usr/local/sbin:/usr/local/bin:/usr/sbin:/u
 if [ -n "$TMUX" ]; then
     export TERM=screen-256color
 else
-    export TERM=gnome-256color
+    export TERM=xterm-256color
 fi
 
 # Useful aliases
@@ -68,10 +68,10 @@ alias todo="cat ~/todo"
 alias etodo="vim ~/todo"
 alias chkmail="offlineimap -o"
 
-source ~/programming/other/virtualenv-tools/virtualenv.sh
-source ~/programming/other/zsh-scripts/start-ssh-agent.sh
-source ~/programming/other/zsh-scripts/autostart-tmux.sh
-source ~/programming/other/zsh-scripts/push-ssh-key.sh
+source ~/programmeren/virtualenv-tools/virtualenv.sh
+source ~/programmeren/zsh-scripts/start-ssh-agent.sh
+source ~/programmeren/zsh-scripts/autostart-tmux.sh
+source ~/programmeren/zsh-scripts/push-ssh-key.sh
 
 function syncer() {
     if [ -n $1 ]; then
