@@ -1,6 +1,6 @@
 #! /usr/bin/bash
 
-sudo apt-get install procmail fetchmail
+sudo apt-get install procmail fetchmail mutt offlineimap
 
 # Set up mail config
 mkdir ~/.procmail/
