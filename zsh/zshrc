@@ -82,7 +82,7 @@ function syncer() {
 
     cd ~/programmeren/syncer
     export SYNCER_ENV=$ENV
-    activate
+    activate .syncer_env
     pynt setup
 }
 
