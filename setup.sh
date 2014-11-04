@@ -53,3 +53,7 @@ ln -s $PWD/mutt/muttrc ~/.muttrc
 
 # offlineimap
 ln -s $PWD/offlineimap/offlineimaprc ~/.offlineimaprc
+
+# xinitrc
+mv ~/.xinitrc ~/.xinitrc-old
+ln -s $PWD/xinit/xinitrc ~/.xinitrc
