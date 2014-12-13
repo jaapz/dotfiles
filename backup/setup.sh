@@ -6,5 +6,6 @@
 # (generated using ssh-keygen -t rsa).
 
 sudo apt-get install unison
+mkdir ~/synced
 
-{ crontab -l -u jaapz; echo '*/2 * * * * unison -auto -batch -confirmbigdel=false -sshargs '-i /home/jaapz/.ssh/backup/id_rsa' ~/synced ssh://broekhuizen.nu//home/jaapz/backup'; } | crontab -u jaapz -
+{ crontab -l -u jaapz; echo '*/2 * * * * unison -auto -batch -confirmbigdel=false -sshargs "-i /home/jaapz/.ssh/backup/id_rsa" ~/synced ssh://broekhuizen.nu//home/jaapz/backup'; } | crontab -u jaapz -
