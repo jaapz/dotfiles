@@ -15,7 +15,7 @@ ZSH_THEME="steeef"
 # CASE_SENSITIVE="true"
 
 # Comment this out to disable bi-weekly auto-update checks
-# DISABLE_AUTO_UPDATE="true"
+DISABLE_AUTO_UPDATE="true"
 
 # Uncomment to change how many often would you like to wait before auto-updates occur? (in days)
 # export UPDATE_ZSH_DAYS=13
@@ -111,8 +111,16 @@ function bam() {
     activate
 }
 
-function thesis() {
-    cd ~/documents/bachelor-thesis-report
-    mupdf ~/documents/bachelor-thesis-report/bachelor-thesis-report.pdf &
-    vim bachelor-thesis-report.tex
+function brio() {
+    cd ~/programming/brio-utils
+    export BRIO_UTILS_PROJECT=$1
+    export BRIO_UTILS_USER=auke
+    export BRIO_UTILS_PASS=$2
+    activate
 }
+
+export PATH="$PATH:$HOME/.rvm/bin" # Add RVM to PATH for scripting
+
+# ZSH Syntax Highligher
+ZSH_HIGHLIGHT_HIGHLIGHTERS=(main brackets pattern cursor)
+source ~/.oh-my-zsh/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh  
