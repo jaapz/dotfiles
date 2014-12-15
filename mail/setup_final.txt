@@ -1,0 +1,9 @@
+After this create a ~/.netrc with the following contents
+    
+    machine webmail.baopt.nl
+    user xxx
+    password xxx
+
+And add a cronjob:
+
+    */5 * * * * fetchmail -f ~/.fetchmail

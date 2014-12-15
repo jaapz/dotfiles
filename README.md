@@ -17,7 +17,9 @@ I encrypt my password files using openssl. To create an encrypted password file,
 do:
 
    echo "mypassword" > ~/.gmail-password.before
-   cat ~/.gmail-password.before | openssl rsautl -encrypt -pubin -inkey ~/.ssh/id_rsa.pub.pem > ~/.gmail-password
+   openssl genrsa -out ~/.keys/mail.pem 1024
+   chmod 600 ~/.keys/mail.pem
+   cat ~/.gmail-password.before | openssl rsautl -encrypt -inkey ~/.keys/mail.pem > ~/.gmail-password
    rm ~/.gmail-password.before
 
 My encrypted password files are ~/.gmail-password and ~/.personal-password,
