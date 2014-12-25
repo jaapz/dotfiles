@@ -3,20 +3,16 @@
 # ~/.xinitrc
 #
 # Executed by startx (run your window manager from here)
-
+ 
 if [ -d /etc/X11/xinit/xinitrc.d ]; then
-for f in /etc/X11/xinit/xinitrc.d/*; do
-[ -x "$f" ] && . "$f"
-done
-unset f
+    for f in /etc/X11/xinit/xinitrc.d/*; do
+        [ -x "$f" ] && . "$f"
+    done
+    unset f
 fi
-
+ 
 xrdb -merge .Xresources &
-
-# Starts the i3 session by default. Can select the openbox-session as well if
-# the login manager asks for it. If you want to be able to access both sessions
-# from the SLiM login manager, you should edit /etc/slim.conf to contain:
-#     sessions i3,openbox-session
+ 
 case $1 in
     openbox-session)
         exec openbox-session
@@ -24,6 +20,5 @@ case $1 in
     i3 | *)
         nm-applet &
         exec ck-launch-session i3
-        # exec i3
         ;;
 esac
