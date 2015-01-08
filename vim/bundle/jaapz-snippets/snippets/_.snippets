@@ -1,0 +1,12 @@
+snippet cfp
+	# Room ${1}	
+	- input: ${2}
+	  problem_type: 3
+	  converter: {name: linear, max_: 50}
+	  checker: {
+		  name: 'does_not_exceed_setpoint_value',
+		  args: {
+			  setpoint_output: ${3},
+			  threshold: 1.5
+		  }
+	  }
