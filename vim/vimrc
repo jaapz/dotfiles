@@ -101,6 +101,8 @@ map <C-b> :CtrlPBuffer<CR>
 filetype on
 filetype plugin indent on
 
+au BufNewFile,BufRead *.rs set filetype=rust
+
 " Python mode settings
 let g:pymode_lint_checker = "pyflakes,pylint,pep8"
 let g:pymode_lint_cwindow = 0

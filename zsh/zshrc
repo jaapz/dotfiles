@@ -41,7 +41,8 @@ plugins=(git git-extras battery extract colorize python urltools)
 source $ZSH/oh-my-zsh.sh
 
 # Customize to your needs...
-export PATH=/usr/lib/lightdm/lightdm:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/usr/games
+export PATH=/usr/lib/lightdm/lightdm:/home/jaapz/programmeren/go/bin:/home/jaapz/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/usr/games:/usr/local/go/bin
+export GOPATH=/home/jaapz/programmeren/go
 
 ### Added by the Heroku Toolbelt
 #export PATH="/usr/local/heroku/bin:$PATH"

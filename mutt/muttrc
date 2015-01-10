@@ -16,13 +16,15 @@ set display_filter = ~/.mutt/add-aliases.sh
 # Gmail folders
 set folder = ~/.maildir
 set spoolfile = "+INBOX"
-set postponed = "+[Gmail]/Drafts"
+set postponed = "+[Gmail].Drafts"
 set trash = "+[Gmail].Trash"
 unset record
 
 mailboxes +INBOX \
-          +Personal \
-          +BaOpt
+	  +[Gmail].Trash \
+      +[Gmail].Drafts \
+      +Personal
+      #+BaOpt
 
 # Profiles
 macro index \e1 ":source ~/.mutt/gmail.muttrc\n" "Switch to jaapz.b@gmail.com"
