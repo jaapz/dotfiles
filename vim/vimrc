@@ -16,11 +16,7 @@ set nocompatible " No vi compatibility
 set cursorline " Highlight current line
 set so=5
 
-" Auto-make latex
-map <leader>b <Esc>:make pdf<CR><CR><CR>
-
-" Search settings
-set hlsearch
+" Search settings set hlsearch
 set incsearch
 
 " Split the Correct(tm) way.
@@ -86,16 +82,27 @@ set t_Co=256
 " Vim-airline config
 let g:airline_left_sep=''
 let g:airline_right_sep=''
-let g:airline_theme='molokai'
+let g:airline_theme='wombat'
 let g:bufferline_echo=0
 set laststatus=2 " Always show statusline
 set noshowmode
 
 " CtrlP config
 let g:ctrlp_max_height = 20
+let g:ctrlp_max_files = 0
+let g:ctrlp_clear_cache_on_exit = 0
+let g:ctrlp_match_func = { 'match': 'pymatcher#PyMatch' }
 map <leader>t :CtrlPTag<cr>
 map <C-b> :CtrlPBuffer<CR>
 
+" Use ag!
+set grepprg=ag
+
+" Use ag in CtrlP for listing files. Lightning fast and respects .gitignore
+let g:ctrlp_user_command = 'ag %s -l --nocolor -g ""'
+
+" ag is fast enough that CtrlP doesn't need to cache
+let g:ctrlp_use_caching = 0
 
 " Enable pyflakes
 filetype on
@@ -106,20 +113,7 @@ let g:pymode_lint_checker = "pyflakes,pylint,pep8"
 let g:pymode_lint_cwindow = 0
 let g:pymode_lint_ignore = "F0401"
 
-" Neocomplete
-autocmd FileType css setlocal omnifunc=csscomplete#CompleteCSS
-autocmd FileType html,markdown setlocal omnifunc=htmlcomplete#CompleteTags
-autocmd FileType python setlocal omnifunc=pythoncomplete#Complete
-
-if !exists('g:neocomplete#sources#omni#input_patterns')
-      let g:neocomplete#sources#omni#input_patterns = {}
-endif
-if !exists('g:neocomplete#force_omni_input_patterns')
-        let g:neocomplete#force_omni_input_patterns = {}
-endif
-let g:neocomplete#force_omni_input_patterns.javascript = '[^. \t]\.\w*'
-
-let g:neocomplete#enable_at_startup = 1
+" Don't preview documentation for an autocomplete candidate.
 set completeopt-=preview
 
 " NERDTree
@@ -131,10 +125,6 @@ noremap <leader>/ <Esc>:bn<CR>
 noremap <leader>. <Esc>:bp<CR>
 noremap <leader>o <Esc>:bd<CR>
 
-" Undo/Redo
-noremap <leader>u <Esc>:undo<CR>
-noremap <leader>r <Esc>:redo<CR>
-
 noremap <leader>s <Esc>:w<CR>
 inoremap <leader>s <Esc>:w<CR>
 vnoremap <leader>s <Esc>:w<CR>
@@ -144,6 +134,7 @@ ca w!! %!sudo tee %
 
 " Handy commands
 com W w
+com Qa qa
 
 " Copy and Paste to system clipboard
 vmap <leader>c "+y
@@ -157,6 +148,8 @@ map <Up> <Nop>
 map <Down> <Nop>
 
 set ttyfast
-set lazyredraw
 set re=1
 set hidden
+
+map <C-J> <Plug>snipMateNextOrTrigger
+smap <C-J> <Plug>snipMateNextOrTrigger

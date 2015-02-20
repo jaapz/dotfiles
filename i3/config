@@ -38,7 +38,8 @@ bindsym $mod+equal exec pactl set-sink-volume 1 +5%
 bindsym $mod+minus exec pactl set-sink-volume 1 -- -5%
 
 # start a terminal
-bindsym $mod+Return exec i3-sensible-terminal
+#bindsym $mod+Return exec i3-sensible-terminal
+bindsym $mod+Return exec st
 
 # kill focused window
 bindsym $mod+Shift+q kill
@@ -163,8 +164,12 @@ bindsym $mod+r mode "resize"
 # finds out, if available)
 bar {
         position top
+        #mode hide
+        #hidden_state hide
+        #modifier $mod
         status_command $HOME/.my-conky-i3bar-script.sh
 }
+new_window 1pixel
 
 # colors
 client.focused        #1F1F1F #555555 #eeeeee
