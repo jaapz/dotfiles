@@ -13,24 +13,12 @@
 [submodule "vim/bundle/python-syntax"]
 	path = vim/bundle/python-syntax
 	url = git://github.com/vim-scripts/python.vim--Vasiliev.git
-[submodule "vim/bundle/vim-less"]
-	path = vim/bundle/vim-less
-	url = git://github.com/lunaru/vim-less.git
 [submodule "vim/bundle/supertab"]
 	path = vim/bundle/supertab
 	url = https://github.com/ervandew/supertab
-[submodule "vim/bundle/twig"]
-	path = vim/bundle/twig
-	url = git://github.com/beyondwords/vim-twig.git
-[submodule "vim/bundle/fugitive"]
-	path = vim/bundle/fugitive
-	url = git://github.com/tpope/vim-fugitive.git
 [submodule "vim/bundle/ctrlp"]
 	path = vim/bundle/ctrlp
 	url = git://github.com/kien/ctrlp.vim.git
-[submodule "vim/bundle/pydocstring"]
-	path = vim/bundle/pydocstring
-	url = git://github.com/heavenshell/vim-pydocstring.git
 [submodule "vim/bundle/virtualenv"]
 	path = vim/bundle/virtualenv
 	url = git://github.com/jmcantrell/vim-virtualenv.git
@@ -70,6 +58,6 @@
 [submodule "vim/bundle/rst-tables"]
 	path = vim/bundle/rst-tables
 	url = https://github.com/nvie/vim-rst-tables
-[submodule "vim/bundle/vim-istanbul"]
-	path = vim/bundle/vim-istanbul
-	url = https://github.com/juanpabloaj/vim-istanbul
+[submodule "vim/bundle/ctrlp-py-matcher"]
+	path = vim/bundle/ctrlp-py-matcher
+	url = git@github.com:FelikZ/ctrlp-py-matcher.git
