@@ -19,18 +19,9 @@
 [submodule "vim/bundle/supertab"]
 	path = vim/bundle/supertab
 	url = https://github.com/ervandew/supertab
-[submodule "vim/bundle/twig"]
-	path = vim/bundle/twig
-	url = git://github.com/beyondwords/vim-twig.git
-[submodule "vim/bundle/fugitive"]
-	path = vim/bundle/fugitive
-	url = git://github.com/tpope/vim-fugitive.git
 [submodule "vim/bundle/ctrlp"]
 	path = vim/bundle/ctrlp
 	url = git://github.com/kien/ctrlp.vim.git
-[submodule "vim/bundle/pydocstring"]
-	path = vim/bundle/pydocstring
-	url = git://github.com/heavenshell/vim-pydocstring.git
 [submodule "vim/bundle/virtualenv"]
 	path = vim/bundle/virtualenv
 	url = git://github.com/jmcantrell/vim-virtualenv.git
@@ -55,9 +46,6 @@
 [submodule "vim/bundle/vim-snippets"]
 	path = vim/bundle/vim-snippets
 	url = https://github.com/honza/vim-snippets.git
-[submodule "vim/bundle/neocomplete"]
-	path = vim/bundle/neocomplete
-	url = https://github.com/Shougo/neocomplete.vim
 [submodule "vim/bundle/tern"]
 	path = vim/bundle/tern
 	url = https://github.com/marijnh/tern_for_vim
@@ -70,6 +58,9 @@
 [submodule "vim/bundle/rst-tables"]
 	path = vim/bundle/rst-tables
 	url = https://github.com/nvie/vim-rst-tables
-[submodule "vim/bundle/vim-istanbul"]
-	path = vim/bundle/vim-istanbul
-	url = https://github.com/juanpabloaj/vim-istanbul
+[submodule "vim/bundle/YouCompleteMe"]
+	path = vim/bundle/YouCompleteMe
+	url = https://github.com/Valloric/YouCompleteMe.git
+[submodule "vim/bundle/ctrlp-py-matcher"]
+	path = vim/bundle/ctrlp-py-matcher
+	url = https://github.com/FelikZ/ctrlp-py-matcher.git
