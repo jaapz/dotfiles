@@ -16,9 +16,6 @@ set nocompatible " No vi compatibility
 set cursorline " Highlight current line
 set so=5
 
-" Auto-make latex
-map <leader>b <Esc>:make pdf<CR><CR><CR>
-
 " Search settings
 set hlsearch
 set incsearch
@@ -78,23 +75,31 @@ map <silent> <F11>
 \    :call system("wmctrl -ir " . v:windowid . " -b toggle,fullscreen")<CR>
 
 " Enable colorscheme and 256 colors
-colorscheme molokai
+colorscheme vombatidae
 syntax on
 set t_Co=256
 
 " Vim-airline config
 let g:airline_left_sep=''
 let g:airline_right_sep=''
-let g:airline_theme='molokai'
+let g:airline_theme='wombat'
 let g:bufferline_echo=0
 set laststatus=2 " Always show statusline
 set noshowmode
 
 " CtrlP config
 let g:ctrlp_max_height = 20
+let g:ctrlp_max_files = 0                                                      
+let g:ctrlp_clear_cache_on_exit = 0                                            
+let g:ctrlp_use_caching = 0
+let g:ctrlp_match_func = { 'match': 'pymatcher#PyMatch' }                      
+let g:ctrlp_user_command = 'ag %s -l --nocolor -g ""'
+
+" Use ag!
+set grepprg=ag
+
 map <leader>t :CtrlPTag<cr>
 map <C-b> :CtrlPBuffer<CR>
-
 
 " Enable pyflakes
 filetype on
@@ -103,7 +108,10 @@ filetype plugin indent on
 " Python mode settings
 let g:pymode_lint_checker = "pyflakes,pylint,pep8"
 let g:pymode_lint_cwindow = 0
+let g:pymode_rope_complete_on_dot = 0
 let g:pymode_lint_ignore = "F0401"
+let g:pymode_rope_goto_definition_bind = '<leader>g'
+let g:pymode_rope_goto_definition_cmd = 'e'
 
 " Neocomplete
 set completeopt-=preview
@@ -116,10 +124,6 @@ noremap <leader>a <Esc>:NERDTreeFind<CR>
 noremap <leader>/ <Esc>:bn<CR>
 noremap <leader>. <Esc>:bp<CR>
 noremap <leader>o <Esc>:bd<CR>
-
-" Undo/Redo
-noremap <leader>u <Esc>:undo<CR>
-noremap <leader>r <Esc>:redo<CR>
 
 noremap <leader>s <Esc>:w<CR>
 inoremap <leader>s <Esc>:w<CR>
@@ -141,3 +145,6 @@ map <Left> <Nop>
 map <Right> <Nop>
 map <Up> <Nop>
 map <Down> <Nop>
+
+map <C-J> <Plug>snipMateNextOrTrigger
+smap <C-J> <Plug>snipMateNextOrTrigger
