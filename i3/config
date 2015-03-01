@@ -20,6 +20,8 @@ font -misc-fixed-medium-r-normal--13-120-75-75-C-70-iso10646-1
 # chose a FreeType font, such as:
 font pango:DejaVu Sans Mono 9
 
+new_window 1pixel
+
 # Use Mouse+$mod to drag floating windows to their wanted position
 floating_modifier $mod
 for_window [class="Cb-exit" instance="cb-exit"] floating enable
@@ -28,7 +30,7 @@ for_window [class="Cb-exit" instance="cb-exit"] floating enable
 bindsym $mod+m move workspace to output left
 
 # lock screen
-bindsym $mod+semicolon exec i3lock -c 111111
+bindsym $mod+semicolon exec /usr/bin/slock
 
 # suspend
 bindsym $mod+Shift+semicolon exec cb-exit
@@ -38,7 +40,7 @@ bindsym $mod+equal exec pactl set-sink-volume 1 +5%
 bindsym $mod+minus exec pactl set-sink-volume 1 -- -5%
 
 # start a terminal
-bindsym $mod+Return exec i3-sensible-terminal
+bindsym $mod+Return exec /usr/local/bin/st
 
 # kill focused window
 bindsym $mod+Shift+q kill

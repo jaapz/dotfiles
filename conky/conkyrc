@@ -16,7 +16,7 @@ cpu_avg_samples 2
 
 TEXT
 
-[{"full_text": "${new_mails /home/jaapz/.maildir/INBOX} new mails", "color": "\#e9da8c"},
+[{"full_text": "${new_mails /home/jaapz/.maildir/INBOX} gmail, ${new_mails /home/jaapz/.maildir/Personal} personal", "color": "\#e9da8c"},
  ${if_mpd_playing}{"full_text": "${if_match "${mpd_status}" == "Playing"}▶${endif} $mpd_title - $mpd_artist", "color": "\#daf0ff"},${endif}
  {"full_text": "${fs_used /}/${fs_size /} used", "color": "\#c7c7c7"},
  {"full_text": "cpu ${cpu}%", "color": ${if_match ${memperc}<90}"\#c7c7c7"${else}"\#ff0000"${endif}},

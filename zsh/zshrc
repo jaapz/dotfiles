@@ -51,7 +51,7 @@ export GOPATH=/home/jaapz/programmeren/go
 if [ -n "$TMUX" ]; then
     export TERM=screen-256color
 else
-    export TERM=xterm-256color
+    export TERM=st-256color
 fi
 
 # Useful aliases
