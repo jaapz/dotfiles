@@ -112,6 +112,13 @@ filetype plugin indent on
 let g:pymode_lint_checker = "pyflakes,pylint,pep8"
 let g:pymode_lint_cwindow = 0
 let g:pymode_lint_ignore = "F0401"
+let g:pymode_rope_complete_on_dot = 0
+
+" Syntastic config
+let g:syntastic_javascript_checkers = ['jshint']
+let g:syntastic_always_populate_loc_list = 1
+noremap <leader>ne <Esc>:lnext<CR>
+noremap <leader>pe <Esc>:lprev<CR>
 
 " Don't preview documentation for an autocomplete candidate.
 set completeopt-=preview

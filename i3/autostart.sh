@@ -29,6 +29,6 @@ xset b off &
 
 ## Set the background
 #feh --bg-tile ~/.background.img
-feh  --bg-scale '/home/jaapz/images/wallpapers/nap.png' &
+feh  --bg-fill '/home/jaapz/images/wallpapers/eclipse.png' &
 
 nm-applet &
