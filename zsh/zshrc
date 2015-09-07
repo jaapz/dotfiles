@@ -37,7 +37,7 @@ COMPLETION_WAITING_DOTS="true"
 # Which plugins would you like to load? (plugins can be found in ~/.oh-my-zsh/plugins/*)
 # Custom plugins may be added to ~/.oh-my-zsh/custom/plugins/
 # Example format: plugins=(rails git textmate ruby lighthouse)
-plugins=(virtualenv git git-extras battery extract colorize python urltools)
+plugins=(virtualenv git git-extras battery extract colorize python urltools fabric)
 
 source $ZSH/oh-my-zsh.sh
 
@@ -64,15 +64,15 @@ alias pynt="noglob pynt"
 alias tests="pynt tests"
 alias karma="pynt js"
 alias web="x-www-browser"
-alias irssi-remote="ssh jaapz@broekhuizen.nu -t 'tmux attach -t irssi'"
+alias irc-remote="ssh jaapz@broekhuizen.nu -t 'tmux attach -t weechat'"
 alias todo="cat ~/todo"
 alias etodo="vim ~/todo"
 alias ag="ag --pager 'less -R'"
 
-source ~/programming/other/virtualenv-tools/virtualenv.sh
-source ~/programming/other/zsh-scripts/start-ssh-agent.sh
-source ~/programming/other/zsh-scripts/autostart-tmux.sh
-source ~/programming/other/zsh-scripts/push-ssh-key.sh
+source ~/Programming/virtualenv-tools/virtualenv.sh
+source ~/Programming/zsh-scripts/start-ssh-agent.sh
+source ~/Programming/zsh-scripts/autostart-tmux.sh
+source ~/Programming/zsh-scripts/push-ssh-key.sh
 
 function syncer() {
     if [ -n $1 ]; then
@@ -81,7 +81,7 @@ function syncer() {
         ENV='prod'
     fi
 
-    cd ~/programming/syncer
+    cd ~/Programming/syncer
     export SYNCER_ENV=$ENV
     activate
     pynt setup
@@ -94,10 +94,10 @@ function mbo() {
         ENV='prod'
     fi
 
-    cd ~/programming/mijnbaopt
+    cd ~/Programming/mijnbaopt
     export MIJNBAOPT_ENV=$ENV
-    export MIJNBAOPT_DIR='/home/jaapz/programming/mijnbaopt'
-    export MIJNBAOPT_VENV='/home/jaapz/programming/mijnbaopt/.env'
+    export MIJNBAOPT_DIR='/home/jaapz/Programming/mijnbaopt'
+    export MIJNBAOPT_VENV='/home/jaapz/Programming/mijnbaopt/.env'
     activate
 }
 
@@ -108,13 +108,13 @@ function bam() {
         ENV='prod'
     fi
 
-    cd ~/programming/account-manager
+    cd ~/Programming/account-manager
     export ACCOUNTMANAGER_ENV=$ENV
     activate
 }
 
 function brio() {
-    cd ~/programming/brio-utils
+    cd ~/Programming/brio-utils
     export BRIO_UTILS_PROJECT=$1
     export BRIO_UTILS_USER=auke
     export BRIO_UTILS_PASS=$2
@@ -122,7 +122,3 @@ function brio() {
 }
 
 export PATH="$PATH:$HOME/.rvm/bin" # Add RVM to PATH for scripting
-
-# ZSH Syntax Highligher
-ZSH_HIGHLIGHT_HIGHLIGHTERS=(main brackets pattern cursor)
-source ~/.oh-my-zsh/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh  
