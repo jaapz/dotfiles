@@ -40,6 +40,12 @@ bindsym XF86AudioRaiseVolume exec pactl set-sink-volume 0 +5%
 bindsym XF86AudioLowerVolume exec pactl set-sink-volume 0 -- -5%
 bindsym XF86AudioMute exec pactl set-sink-mute 0 toggle
 
+# spotify controls
+bindsym $mod+F11 exec dbus-send --print-reply --dest=org.mpris.MediaPlayer2.spotify /org/mpris/MediaPlayer2 org.mpris.MediaPlayer2.Player.PlayPause
+bindsym $mod+F12 exec dbus-send --print-reply --dest=org.mpris.MediaPlayer2.spotify /org/mpris/MediaPlayer2 org.mpris.MediaPlayer2.Player.Next
+bindsym $mod+F10 exec dbus-send --print-reply --dest=org.mpris.MediaPlayer2.spotify /org/mpris/MediaPlayer2 org.mpris.MediaPlayer2.Player.Stop
+bindsym $mod+F9 exec dbus-send --print-reply --dest=org.mpris.MediaPlayer2.spotify /org/mpris/MediaPlayer2 org.mpris.MediaPlayer2.Player.Previous
+
 # start a terminal
 #bindsym $mod+Return exec i3-sensible-terminal
 bindsym $mod+Return exec st
@@ -113,10 +119,10 @@ bindsym mod4+s scratchpad show
 
 # switch to workspace
 bindsym $mod+1 workspace 1:web
-bindsym $mod+2 workspace 2:code
-bindsym $mod+3 workspace 3:msg
-bindsym $mod+4 workspace 4:syn
-bindsym $mod+5 workspace 5:mbo
+bindsym $mod+2 workspace 2:msg
+bindsym $mod+3 workspace 3:code
+bindsym $mod+4 workspace 4
+bindsym $mod+5 workspace 5
 bindsym $mod+6 workspace 6
 bindsym $mod+7 workspace 7
 bindsym $mod+8 workspace 8
@@ -183,4 +189,6 @@ client.urgent        #E41B17 #C60000 #FFFFFF
 for_window [class="Xfce4-notifyd"] floating enable; border none; focus mode_toggle
 
 # Autostart these services
-exec ~/.i3/autostart.sh
+exec --no-startup-id ~/.screenlayout/dual_monitor.sh
+exec --no-startup-id dunst
+exec --no-startup-id "sh -c 'sleep 10; feh --bg-fill ~/Pictures/wallpaper/coffee-pixels.png'"
