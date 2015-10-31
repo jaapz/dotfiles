@@ -36,7 +36,7 @@ COMPLETION_WAITING_DOTS="true"
 # Which plugins would you like to load? (plugins can be found in ~/.oh-my-zsh/plugins/*)
 # Custom plugins may be added to ~/.oh-my-zsh/custom/plugins/
 # Example format: plugins=(rails git textmate ruby lighthouse)
-plugins=(git git-extras battery extract colorize python urltools gpg-agent)
+plugins=(git git-extras battery extract colorize python urltools gpg-agent fab)
 
 source $ZSH/oh-my-zsh.sh
 
@@ -54,6 +54,7 @@ else
 fi
 
 # Useful aliases
+alias docker="sudo /usr/bin/docker"
 alias fucking="sudo" # JUST DO EEET FFS
 alias :q='exit'
 alias v="vim --remote-tab"
@@ -63,7 +64,7 @@ alias pynt="noglob pynt"
 alias tests="pynt tests"
 alias karma="pynt js"
 alias web="x-www-browser"
-alias irssi-remote="ssh jaapz@broekhuizen.nu -t 'tmux attach -t irssi'"
+alias irc-remote="ssh jaapz@broekhuizen.nu -t 'tmux attach -t weechat'"
 alias todo="cat ~/todo"
 alias etodo="vim ~/todo"
 
