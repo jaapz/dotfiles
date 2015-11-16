@@ -131,10 +131,10 @@ bindsym $mod+0 workspace 10
 
 # move focused container to workspace
 bindsym $mod+Shift+1 move container to workspace 1:web
-bindsym $mod+Shift+2 move container to workspace 2:code
-bindsym $mod+Shift+3 move container to workspace 3:msg
-bindsym $mod+Shift+4 move container to workspace 4:syn
-bindsym $mod+Shift+5 move container to workspace 5:mbo
+bindsym $mod+Shift+2 move container to workspace 2:msg
+bindsym $mod+Shift+3 move container to workspace 3:code
+bindsym $mod+Shift+4 move container to workspace 4
+bindsym $mod+Shift+5 move container to workspace 5
 bindsym $mod+Shift+6 move container to workspace 6
 bindsym $mod+Shift+7 move container to workspace 7
 bindsym $mod+Shift+8 move container to workspace 8
@@ -191,4 +191,4 @@ for_window [class="Xfce4-notifyd"] floating enable; border none; focus mode_togg
 # Autostart these services
 exec --no-startup-id ~/.screenlayout/dual_monitor.sh
 exec --no-startup-id dunst
-exec --no-startup-id "sh -c 'sleep 10; feh --bg-fill ~/Pictures/wallpaper/coffee-pixels.png'"
+exec --no-startup-id "sh -c 'sleep 3; feh --bg-fill ~/Pictures/wallpaper/coffee-pixels.png'"
