@@ -5,28 +5,15 @@
 ## GNOME PolicyKit and Keyring
 eval $(gnome-keyring-daemon -s --components=pkcs11,secrets,ssh,gpg) &
 
-## Volume control for systray
-(sleep 2s && pnmixer) &
-
-## Volume keys daemon
-xfce4-volumed &
-
-## Enable power management
-xfce4-power-manager &
-
 ## Start Thunar Daemon
 thunar --daemon &
 
-## Start xscreensaver
-xautolock -time 10 -locker 'i3lock -c 111111' &
-
-## Set keyboard settings - 250 ms delay and 25 cps (characters per second) repeat rate.
-## Adjust the values according to your preferances.
-xset r rate 250 25 &
-
-## Turn on/off system beep
+## Turn off system beep
 xset b off &
 
+## Network manager.
+nm-applet &
+
 ## Set the background
-#feh --bg-tile ~/.background.img
-feh  --bg-scale '/home/jaapz/images/wallpapers/nap.png' 
+feh --bg-tile '/home/jaapz/Pictures/bg/dark_embroidery.png'
+#feh  --bg-scale '/home/jaapz/images/wallpapers/nap.png' 
