@@ -21,9 +21,10 @@ case $1 in
     openbox-session)
         exec openbox-session
         ;;
+    steam-de)
+        exec steam-de
+        ;;
     i3 | *)
-        nm-applet &
         exec ck-launch-session i3
-        # exec i3
         ;;
 esac
